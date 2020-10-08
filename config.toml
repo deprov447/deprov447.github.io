@@ -1,4 +1,3 @@
-baseURL = "http://deprov.me/pen"
 title = "PEN"
 paginate = 5
 theme = "hugo-PaperMod"
