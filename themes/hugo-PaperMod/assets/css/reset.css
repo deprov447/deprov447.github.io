@@ -1,0 +1,146 @@
+/* Reset
+-------------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin: 0;
+    color: var(--primary);
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    letter-spacing: 0.7px;
+    word-spacing: 1.5px;
+    word-break: break-word;
+    font-weight: 600;
+    background: var(--theme);
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--primary);
+    line-height: 1.2;
+    padding: 15px 0;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 20px;
+}
+
+strong,
+b {
+    font-weight: 500;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+figure {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: block;
+    overflow-x: scroll;
+    word-break: keep-all;
+}
+
+button,
+input,
+textarea {
+    padding: 0;
+    font: inherit;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+}
+
+button,
+input[type='button'],
+input[type='submit'] {
+    cursor: pointer;
+}
+
+input,
+textarea {
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+    box-shadow: 0 0 0 50px var(--theme) inset;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--theme);
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--tertiary);
+    border-radius: var(--radius);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+}
+
+@media screen and (max-width: 800px) {
+    *::-webkit-scrollbar {
+        width: 8px;
+        height: 2px;
+    }
+}
+
+*:focus {
+    outline:none;
+}

@@ -1,0 +1,61 @@
+baseURL = "http://deprov.me/pen"
+title = "PEN"
+paginate = 5
+theme = "hugo-PaperMod"
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpored = false
+googleAnalytics = "UA-123-45"
+
+[minify]
+disableXML = true
+minifyOutput = true
+
+[params]
+env = "production"
+title = "Pen"
+description = "A Personal Blog by Anubhav"
+author = 'Me'
+images = "<link or path of image for opengraph, twitter-cards>"
+ShowReadingTime = true
+ShowShareButtons = true
+comments = false
+defaultTheme = "auto"
+disableThemeToggle = false
+disableSpecial1stPost = false
+
+  [params.profileMode]
+  enabled = false
+  title = "Hey Peeps !!"
+
+    [[params.profileMode.buttons]]
+    name = "Posts"
+    url = "blog"
+
+    [[params.profileMode.buttons]]
+    name = "Tags"
+    url = "tags"
+
+  [params.homeInfoParams]
+  Title = "Hey People"
+  Content = "Welcome to my blog"
+
+  [[params.socialIcons]]
+  name = "telegram"
+  url = "https://t.me/deprov447"
+
+  [[params.socialIcons]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/anubhavchoudhary-deprov447/"
+
+  [[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/deprov447"
+
+  [[params.socialIcons]]
+  name = "gitlab"
+  url = "https://invent.kde.org/deprov"
+
+[params.analytics.google]
+SiteVerificationTag = "XYZabc"
