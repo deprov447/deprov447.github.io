@@ -1,6 +1,6 @@
 ---
 title: "Linux Experience After 10 Months"
-date: 2020-10-08T14:18:22+05:30
+date: 2020-10-05T14:18:22+05:30
 draft: false
 ---
 
