@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PEN</title>
+    <link>https://deprov.me/pen/</link>
+    <description>Recent content on PEN</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 08 Oct 2020 14:18:22 +0530</lastBuildDate>
+    
+	<atom:link href="https://deprov.me/pen/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linux Experience After 10 Months</title>
+      <link>https://deprov.me/pen/thoughts/linuxexperience/</link>
+      <pubDate>Thu, 08 Oct 2020 14:18:22 +0530</pubDate>
+      
+      <guid>https://deprov.me/pen/thoughts/linuxexperience/</guid>
+      <description>Its been around 10 months of me using Linux as my primary OS. I bought my laptop on Jan 1st, 2020 (yes :D) and today its Oct 5th (technically been 9 months, but okay). So let me share my experience regarding the same.
+Starting / Booting Up So immediately after getting my laptop, I downloaded an Ubuntu 18.04 LTS ISO image and flashed it on a pen drive. Then booted the laptop using that.</description>
+    </item>
+    
+  </channel>
+</rss>
