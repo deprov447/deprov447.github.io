@@ -1,5 +1,5 @@
 title = "PEN"
-baseURL="https://deprov.me/pen/"
+baseURL="http://deprov.me/pen/"
 publishDir = "docs"
 paginate = 5
 theme = "hugo-PaperMod"
