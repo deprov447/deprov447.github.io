@@ -1,6 +1,4 @@
 title = "PEN"
-baseURL="http://deprov.me/pen/"
-publishDir = "docs"
 paginate = 5
 theme = "hugo-PaperMod"
 enableRobotsTXT = true
