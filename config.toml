@@ -19,26 +19,15 @@ author = 'Me'
 images = "<link or path of image for opengraph, twitter-cards>"
 ShowReadingTime = true
 ShowShareButtons = true
-comments = false
+comments = true
 defaultTheme = "auto"
 disableThemeToggle = false
 disableSpecial1stPost = false
 
-  [params.profileMode]
-  enabled = false
-  title = "Hey Peeps !!"
-
-    [[params.profileMode.buttons]]
-    name = "Posts"
-    url = "blog"
-
-    [[params.profileMode.buttons]]
-    name = "Tags"
-    url = "tags"
-
   [params.homeInfoParams]
   Title = "Hey People"
   Content = "Welcome to my blog"
+  
 
   [[params.socialIcons]]
   name = "telegram"
