@@ -5,7 +5,7 @@
 }
 
 .post-title {
-    margin-bottom: 2px;
+    margin-bottom: 0px;
     font-size: 40px;
     transform: translateX(-2px);
 }
@@ -15,6 +15,7 @@
     font-size: 14px;
     display: flex;
     flex-wrap: wrap;
+    margin: 0px 50px 100px;
 }
 
 .post-meta .i18n_list li {
@@ -80,7 +81,10 @@
 .post-content ul,
 .post-content ol,
 .post-content dl {
-    margin-bottom: var(--content-gap);
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
 }
 
 .post-content ul,
