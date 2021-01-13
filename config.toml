@@ -1,4 +1,5 @@
 title = "PEN"
+baseURL= "/"
 paginate = 5
 theme = "hugo-PaperMod"
 enableRobotsTXT = true
