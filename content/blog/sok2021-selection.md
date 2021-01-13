@@ -1,7 +1,7 @@
 ---
 title: "Season of KDE Selection"
 date: 2021-01-13T12:40:24+05:30
-draft: true
+draft: false
 author: "Me"
 tags: ["kde","development","tech"]
 cover: 
