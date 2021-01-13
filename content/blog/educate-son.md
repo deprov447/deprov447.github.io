@@ -3,7 +3,7 @@ title: "This Educate-son"
 date: 2020-11-17T08:14:13+05:30
 draft: false
 author: "Me"
-tag: ["women", "education", "tragedy", "society","Excerpt"]
+tags: ["women", "education", "tragedy", "society","Excerpt"]
 ---
 
 

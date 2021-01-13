@@ -2,6 +2,7 @@
 title: "Linux Experience After 10 Months"
 date: 2020-10-05T14:18:22+05:30
 draft: false
+tags : ["linux", "tech"]
 ---
 
 ![image](https://miro.medium.com/max/1000/1*aNkG9Dd_r16lPBuztLVHng.jpeg)

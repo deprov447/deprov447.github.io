@@ -3,7 +3,7 @@ title: "A Simple Git Tutorial"
 date: 2020-10-08T19:36:13+05:30
 draft: false
 author: "Me"
-tag: ["Git", "tutorial", "github", "development"]
+tags: ["git", "tutorial", "github", "development", "tech"]
 cover: 
     image: "https://miro.medium.com/max/640/1*OC8FON9bhjFUr0CWF7KpUA.jpeg"
     alt : "Git Gud or Git Rekt"
