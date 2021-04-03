@@ -1,5 +1,5 @@
 title = "PEN"
-baseURL= "pen-deprov.netlify.app/"
+baseURL= "https://pen-deprov.netlify.app/"
 paginate = 5
 theme = "hugo-PaperMod-master"
 enableRobotsTXT = true
