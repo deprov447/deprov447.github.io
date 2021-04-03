@@ -3,6 +3,7 @@ title: "A Simple Git Tutorial"
 date: 2020-10-08T19:36:13+05:30
 draft: false
 author: "Me"
+ShowToc: true
 tags: ["git", "tutorial", "github", "development", "tech"]
 cover: 
     image: "https://miro.medium.com/max/640/1*OC8FON9bhjFUr0CWF7KpUA.jpeg"

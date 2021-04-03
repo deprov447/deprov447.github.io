@@ -1,7 +1,7 @@
 title = "PEN"
-baseURL= "/"
+baseURL= "pen-deprov.netlify.app/"
 paginate = 5
-theme = "hugo-PaperMod"
+theme = "hugo-PaperMod-master"
 enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
@@ -9,21 +9,22 @@ buildExpored = false
 googleAnalytics = "UA-123-45"
 
 [minify]
-disableXML = true
-minifyOutput = true
+disableXML = false
+minifyOutput = false
 
 [params]
 env = "production"
 title = "Pen"
 description = "A Personal Blog by Anubhav"
 author = 'Me'
-images = "<link or path of image for opengraph, twitter-cards>"
+images = "https://i.imgur.com/kffRzo4.jpeg"
 ShowReadingTime = true
 ShowShareButtons = true
 comments = true
 defaultTheme = "auto"
 disableThemeToggle = false
 disableSpecial1stPost = false
+ShowPostNavLinks = true
 
   [params.homeInfoParams]
   Title = "Hey People"
@@ -48,3 +49,15 @@ disableSpecial1stPost = false
 
 [params.analytics.google]
 SiteVerificationTag = "XYZabc"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+
+[params.fuseOpts]
+isCaseSensitive = false
+shouldSort = true
+location = 0
+distance = 1_000
+threshold = 0.4
+minMatchCharLength = 0
+keys = [ "title", "permalink", "summary", "content" ]
