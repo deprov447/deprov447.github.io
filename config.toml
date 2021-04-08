@@ -1,4 +1,4 @@
-title = "PEN"
+title = "deprov447"
 baseURL= "https://pen-deprov.netlify.app/"
 paginate = 5
 theme = "hugo-PaperMod-master"
@@ -13,39 +13,61 @@ disableXML = false
 minifyOutput = false
 
 [params]
-env = "production"
-title = "Pen"
-description = "A Personal Blog by Anubhav"
-author = 'Me'
-images = "https://i.imgur.com/kffRzo4.jpeg"
-ShowReadingTime = true
-ShowShareButtons = true
-comments = true
-defaultTheme = "auto"
-disableThemeToggle = false
-disableSpecial1stPost = false
-ShowPostNavLinks = true
+  env = "production"
+  title = "Pen"
+  description = "A Anubhav's Portfolio"
+  author = 'Anubhav Choudhary'
+  images = "https://i.imgur.com/kffRzo4.jpeg"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  comments = true
+  defaultTheme = "auto"
+  disableThemeToggle = false
+  disableSpecial1stPost = false
+  ShowPostNavLinks = true
 
-  [params.homeInfoParams]
-  Title = "Hey People"
-  Content = "Welcome to my blog"
-  
+[params.profileMode]
+  enabled = true
+  title = "Hello World"
+  subtitle = "I am Anubhav Choudhary. A KDE developer and an *everything* enthusiast"
+  imageUrl = "https://i.imgur.com/ja5j1FL.jpg"
+  imageTitle = "<Profile Pic>"
+  imageWidth = 120
+  imageHeight = 120
+  ShowBreadCrumbs = false
+  comments = true
+
+  [[params.profileMode.buttons]]
+    name = "Me"
+    url = "/utility/me"
+
+  [[params.profileMode.buttons]]
+    name = "What I do/did"
+    url = "/utility/work"
+
+  [[params.profileMode.buttons]]
+    name = "Blogs"
+    url = "/blogs"
 
   [[params.socialIcons]]
-  name = "telegram"
-  url = "https://t.me/deprov447"
+    name = "telegram"
+    url = "https://t.me/deprov447"
 
   [[params.socialIcons]]
-  name = "linkedin"
-  url = "https://www.linkedin.com/in/anubhavchoudhary-deprov447/"
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/anubhavchoudhary-deprov447/"
 
   [[params.socialIcons]]
-  name = "github"
-  url = "https://github.com/deprov447"
+    name = "github"
+    url = "https://github.com/deprov447"
 
   [[params.socialIcons]]
-  name = "gitlab"
-  url = "https://invent.kde.org/deprov"
+    name = "gitlab"
+    url = "https://invent.kde.org/deprov"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:dracarys404@protonmail.com"
 
 [params.analytics.google]
 SiteVerificationTag = "XYZabc"
@@ -61,3 +83,21 @@ distance = 1_000
 threshold = 0.4
 minMatchCharLength = 0
 keys = [ "title", "permalink", "summary", "content" ]
+
+[[menu.main]]
+  identifier = "Archive"
+  name = "archive"
+  url = "/archive/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "tags"
+  name = "tags"
+  url = "/tags/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "search"
+  name = "search"
+  url = "/search/"
+  weight = 30
