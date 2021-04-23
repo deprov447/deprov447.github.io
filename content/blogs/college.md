@@ -1,7 +1,7 @@
 ---
 title: "Some summary"
 date: 2021-02-16T01:24:08+05:30
-draft: false
+draft: true
 author: "Me"
 tags: ["general"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: "This Educate-son"
 date: 2020-11-17T08:14:13+05:30
-draft: false
+draft: true
 author: "Me"
 tags: ["women", "education", "tragedy", "society","Excerpt"]
 ---
