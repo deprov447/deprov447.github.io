@@ -1,5 +1,5 @@
 title = "deprov447"
-baseURL= "https://deprov447.netlify.app/"
+baseURL= "http://deprov447.tech/"
 paginate = 5
 theme = "hugo-PaperMod-master"
 enableRobotsTXT = true
