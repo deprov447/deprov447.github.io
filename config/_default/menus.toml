@@ -22,5 +22,5 @@
 
 [[main]]
   name = "Projects"
-  url = "utility/work"
+  pageRef = "utility/work"
   weight = 10
