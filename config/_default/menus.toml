@@ -11,16 +11,16 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "Blog"
-  pageRef = "posts"
-  weight = 10
-
-[[main]]
-  name = "Categories"
-  pageRef = "categories"
+  name = "Blogs"
+  pageRef = "blogs"
   weight = 20
 
 [[main]]
   name = "Tags"
   pageRef = "tags"
   weight = 30
+
+[[main]]
+  name = "Projects"
+  url = "utility/work"
+  weight = 10

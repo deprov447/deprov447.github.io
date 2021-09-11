@@ -16,8 +16,8 @@ description = "Blogspace for Anubhav Choudhary (deprov447)"
 
 [article]
   showDate = true
-  dateFormat = "2 January 2006"
-  showAuthor = true
+  dateFormat = "January 2, 2006"
+  showAuthor = false
   showBreadcrumbs = true
   showDraftLabel = true
   showEdit = false
