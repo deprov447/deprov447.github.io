@@ -12,15 +12,15 @@
 
 [[main]]
   name = "Blogs"
-  pageRef = "blogs"
-  weight = 20
+  url = "https://blogs.deprov447.tech/"
+  weight = 10
 
 [[main]]
-  name = "Tags"
-  pageRef = "tags"
-  weight = 30
+  name = "Clicks"
+  url = "https://clicks.deprov447.tech/"
+  weight = 20
 
 [[main]]
   name = "Projects"
   pageRef = "utility/work"
-  weight = 10
+  weight = 30

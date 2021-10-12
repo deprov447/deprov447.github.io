@@ -6,7 +6,8 @@
 # https://jpanther.github.io/congo/docs/configuration/#theme-parameters
 
 colorScheme = "ocean"
-description = "Blogspace for Anubhav Choudhary (deprov447)"
+# logo = ""
+description = "Anubhav's part of Internet"
 # mainSections = ["section1", "section2"]
 # robots = ""
 
