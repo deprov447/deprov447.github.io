@@ -1,0 +1,73 @@
+baseURL = "https://deprov447.tech/"
+languageCode = "en-us"
+paginate = 6
+theme = "portio"
+title = "deprov447"
+
+# Main Menu
+weight = 1
+[[menu.main]]
+name = "About"
+url = "#about"
+weight = 2
+[[menu.main]]
+name = "What I do"
+url = "#service"
+weight = 3
+[[menu.main]]
+name = "Projects"
+url = "#portfolio"
+weight = 4
+[[menu.main]]
+name = "Resume"
+url = "#resume"
+weight = 5
+[[menu.main]]
+name = "Blog"
+url = "#blog"
+weight = 6
+
+# Sitemap Menu
+[[menu.sitemap]]
+name = "About me"
+url = "/"
+weight = 1
+[[menu.sitemap]]
+name = "blogs"
+url = "https://blogs.deprov447.tech"
+weight = 2
+
+[params]
+blogPageURL = "https://blogs.deprov447.tech"
+contactLink = "contact"
+copyright = "All right reserved copyright © deprov447 2021"
+footerLogo = "images/site-navigation/logo.png"
+formspreeURL = "YOUR FORMSPREE URL"
+googleAnalytics = "YOUR GOOGLE ANALYTICS CODE"
+logo = "images/site-navigation/logo.png"
+
+[params.address]
+address = "India"
+email = "me@deprov447.tech"
+# openingHours = "Open from 10am to 6pm (close at 5pm Sundays)"
+phone = ""
+
+[params.map]
+# APIkey = "YOUR GOOGLE MAP API"
+# latitude = "23.7783741"
+# longitude = "90.3746808"
+# pinImage = "images/pin.png"
+
+# Social icons
+[[params.social]]
+icon = "fa-linkedin-square"
+url = "https://www.linkedin.com/in/anubhavchoudhary-deprov447/"
+weight = 2
+[[params.social]]
+icon = "fa-github-square"
+url = "https://github.com/deprov447"
+weight = 3
+[[params.social]]
+icon = "fa-twitter-square"
+url = "https://twitter.com/@sigpiped"
+weight = 4

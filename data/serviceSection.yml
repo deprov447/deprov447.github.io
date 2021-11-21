@@ -1,0 +1,40 @@
+---
+enable: true
+topTitle: Working Area
+title: >
+  ## What I do?
+
+service:
+  - content: >
+      #### Web Development 
+
+    image: images/service/web.svg
+  
+  - content: >
+      #### Documentation
+
+    image: images/service/ui-ux.svg
+  
+  - content: >
+      #### Linux Administration
+
+    image: images/service/creative.svg
+
+  # - content: >
+  #     #### Branding
+
+  #     Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod
+  #     tempor invidunt ut labore et dolore magna aliquyam erat.
+  #   image: images/service/branding.svg
+  # - content: >
+  #     #### UI/UX Design
+
+  #     Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod
+  #     tempor invidunt ut labore et dolore magna aliquyam erat.
+  #   image: images/service/ui-ux.svg
+  # - content: >
+  #     #### Web Development
+
+  #     Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod
+  #     tempor invidunt ut labore et dolore magna aliquyam erat.
+  #   image: images/service/web.svg

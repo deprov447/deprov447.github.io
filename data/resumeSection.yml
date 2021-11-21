@@ -1,0 +1,50 @@
+---
+enable: true
+topTitle: My Resume
+title: >
+  ## My Expertises
+
+tab1Name: Education
+tab2Name: Experiences
+tab1Target: education
+tab2Target: experience
+
+experience:
+  - content: >
+      ### KDE Community 
+
+      *Season of KDE Developer*
+
+
+      Worked on **Calamares installer framework**.
+
+      - Developed a customizable installation log upload mechanism to distro/packager specific fiche servers, triggering in case of failed system installation.
+
+      - Hidden navigation buttons during Calamares' actual installation process.
+    time: Jan 2021-April 2021
+  - content: >
+      ### Startup Inc
+
+      *Frontend developer*
+
+
+      - Worked with front end libraries like materialize, bootstrap and tailwind CSS.
+
+      - Rectified CSS keyframe animations, positioning errors and responsive issues on various static/dynamic pages. 
+    time: May 2020-July 2020
+
+education:
+  - content: >
+      ### Bachelor of Technology
+      
+      ##### Computer Science and Engineering
+
+      *International Institute of Information Technology, Bhubaneswar*
+
+    time: 2019-2023
+  - content: >
+      ### Intermediate
+
+      ##### Science with Maths
+
+      *Rani Laxmi Bai Memorial School, Lucknow*
