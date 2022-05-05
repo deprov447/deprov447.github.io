@@ -1,4 +1,4 @@
-baseURL = "https://deprov447.tech/"
+baseURL = "https://deprov447.me/"
 languageCode = "en-us"
 paginate = 6
 theme = "portio"
@@ -34,11 +34,11 @@ url = "/"
 weight = 1
 [[menu.sitemap]]
 name = "blogs"
-url = "https://blogs.deprov447.tech"
+url = "https://blogs.deprov447.me"
 weight = 2
 
 [params]
-blogPageURL = "https://blogs.deprov447.tech"
+blogPageURL = "https://blogs.deprov447.me"
 contactLink = "contact"
 copyright = "All right reserved copyright © deprov447 2021"
 footerLogo = "images/site-navigation/logo.png"
@@ -48,7 +48,7 @@ logo = "images/site-navigation/logo.png"
 
 [params.address]
 address = "India"
-email = "me@deprov447.tech"
+email = "me@deprov447.me"
 # openingHours = "Open from 10am to 6pm (close at 5pm Sundays)"
 phone = ""
 
