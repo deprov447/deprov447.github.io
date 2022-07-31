@@ -40,7 +40,7 @@ weight = 2
 [params]
 blogPageURL = "https://blogs.deprov447.me"
 contactLink = "contact"
-copyright = "All right reserved copyright © deprov447 2021"
+copyright = "All right reserved copyright © deprov447 2022"
 footerLogo = "images/site-navigation/logo.png"
 formspreeURL = "YOUR FORMSPREE URL"
 googleAnalytics = "YOUR GOOGLE ANALYTICS CODE"
@@ -48,7 +48,7 @@ logo = "images/site-navigation/logo.png"
 
 [params.address]
 address = "India"
-email = "me@deprov447.me"
+email = "deprov447 [at] duck [dot] com"
 # openingHours = "Open from 10am to 6pm (close at 5pm Sundays)"
 phone = ""
 
@@ -61,7 +61,7 @@ phone = ""
 # Social icons
 [[params.social]]
 icon = "fa-linkedin-square"
-url = "https://www.linkedin.com/in/anubhavchoudhary-deprov447/"
+url = "https://www.linkedin.com/in/deprov447/"
 weight = 2
 [[params.social]]
 icon = "fa-github-square"
