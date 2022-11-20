@@ -3,10 +3,6 @@ title = "About"
 
   [[entries.entries]]
   title = "I am a fullstack web developer and a general nerd."
-  
-  [[entries.entries]]
-  title = "id_rsa.pub"
-  url = ""
 
   [[entries.entries]]
   title = "Github: @deprov447"
@@ -18,6 +14,9 @@ title = "About"
   [[entries.entries]]
   title = "Email me: anubhav [dot] choudhary [at] proton [dot] me"
 
+  [[entries.entries]]
+  title = "id_rsa.pub"
+  url = "https://github.com/deprov447/deprov447.github.io/blob/9afa1fef14908ddb08d12a86636c0d6e4befd0ad/id_rsa.pub"
 
 [[entries]]
 title = "All posts"
