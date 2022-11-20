@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>virtualization on deprov447</title>
+    <link>https://deprov447.github.io/tags/virtualization/</link>
+    <description>Recent content in virtualization on deprov447</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Apr 2021 18:50:35 +0530</lastBuildDate><atom:link href="https://deprov447.github.io/tags/virtualization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kernel Based Virtualization</title>
+      <link>https://deprov447.github.io/posts/kvm/</link>
+      <pubDate>Thu, 15 Apr 2021 18:50:35 +0530</pubDate>
+      
+      <guid>https://deprov447.github.io/posts/kvm/</guid>
+      <description>Kernel Based Virtualization KVM (Kernel-based Virtual Machine) is an open source, full virtualization solution for x86 hardwares containing virtualization extensions. It is a hypervisor built into the Linux kernel and unlike regular VM players like Virtualbox and VMware which use emulation, KVM uses CPU extensions for hardware assisted virtualization via a kernel module (thats the secret for that blazing speed). Each virtual machine has private virtualized hardware: a network card, disk, graphics adapter and all the peripherals.</description>
+    </item>
+    
+  </channel>
+</rss>
