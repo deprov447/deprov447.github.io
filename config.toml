@@ -2,56 +2,7 @@ baseURL = "https://deprov447.github.io/"
 languageCode = "en-us"
 paginate = 6
 theme = "nostyleplease"
-title = "deprov447"
-
-# Sitemap Menu
-[[menu.sitemap]]
-name = "About me"
-url = "/"
-weight = 1
-[[menu.sitemap]]
-name = "blogs"
-url = "https://blogs.deprov447.me"
-weight = 2
-
-[params]
-blogPageURL = "https://blogs.deprov447.me"
-contactLink = "contact"
-copyright = "All right reserved copyright © deprov447 2022"
-footerLogo = "images/site-navigation/logo.png"
-formspreeURL = "YOUR FORMSPREE URL"
-googleAnalytics = "YOUR GOOGLE ANALYTICS CODE"
-logo = "images/site-navigation/logo.png"
-
-[params.theme_config]
-back_home_text = ".."
-date_format = "2006-01-02"
-
-[params.address]
-address = "India"
-email = "deprov447 [at] duck [dot] com"
-# openingHours = "Open from 10am to 6pm (close at 5pm Sundays)"
-phone = ""
-
-[params.map]
-# APIkey = "YOUR GOOGLE MAP API"
-# latitude = "23.7783741"
-# longitude = "90.3746808"
-# pinImage = "images/pin.png"
-
-# Social icons
-[[params.social]]
-icon = "fa-linkedin-square"
-url = "https://www.linkedin.com/in/deprov447/"
-weight = 2
-[[params.social]]
-icon = "fa-github-square"
-url = "https://github.com/deprov447"
-weight = 3
-[[params.social]]
-icon = "fa-twitter-square"
-url = "https://twitter.com/@sigpiped"
-weight = 4
+title = "Anubhav Choudhary"
 
 [module]
   [module.hugoVersion]

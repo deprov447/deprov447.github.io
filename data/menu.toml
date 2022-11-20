@@ -1,18 +1,26 @@
 [[entries]]
-title = "about"
+title = "About"
 
   [[entries.entries]]
   title = "I am a fullstack web developer and a general nerd."
+  
+  [[entries.entries]]
+  title = "id_rsa.pub"
+  url = ""
 
   [[entries.entries]]
   title = "Github: @deprov447"
   url = "https://github.com/deprov447/"
 
   [[entries.entries]]
-  title = "Email me: anubhav [dot] choudhary [at] pm [dot] me"
+  title = "<a href='https://raw.githubusercontent.com/deprov447/deprov447.github.io/e23f91c751e745358cf03d6f648e945a9b89c9e1/Anubhav_Choudhary_Resume.pdf'>Resume</a>"
+
+  [[entries.entries]]
+  title = "Email me: anubhav [dot] choudhary [at] proton [dot] me"
+
 
 [[entries]]
-title = "all posts"
+title = "All posts"
 
   [entries.post_list]
   limit = 5
@@ -30,7 +38,7 @@ title = "posts by category"
   show_more_url = "posts"
 
 [[entries]]
-title = "rss"
+title = "RSS"
 url = "index.xml"
 
 [[entries]]
