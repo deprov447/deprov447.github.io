@@ -1,31 +1,8 @@
 baseURL = "https://deprov447.me/"
 languageCode = "en-us"
 paginate = 6
-theme = "portio"
+theme = "nostyleplease"
 title = "deprov447"
-
-# Main Menu
-weight = 1
-[[menu.main]]
-name = "About"
-url = "#about"
-weight = 2
-[[menu.main]]
-name = "What I do"
-url = "#service"
-weight = 3
-[[menu.main]]
-name = "Projects"
-url = "#portfolio"
-weight = 4
-[[menu.main]]
-name = "Resume"
-url = "#resume"
-weight = 5
-[[menu.main]]
-name = "Blog"
-url = "#blog"
-weight = 6
 
 # Sitemap Menu
 [[menu.sitemap]]
@@ -45,6 +22,10 @@ footerLogo = "images/site-navigation/logo.png"
 formspreeURL = "YOUR FORMSPREE URL"
 googleAnalytics = "YOUR GOOGLE ANALYTICS CODE"
 logo = "images/site-navigation/logo.png"
+
+[params.theme_config]
+back_home_text = ".."
+date_format = "2006-01-02"
 
 [params.address]
 address = "India"
@@ -71,3 +52,29 @@ weight = 3
 icon = "fa-twitter-square"
 url = "https://twitter.com/@sigpiped"
 weight = 4
+
+[module]
+  [module.hugoVersion]
+    extended=true
+    min = "0.41.0"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = 'rrt'
+    tabWidth = 4
