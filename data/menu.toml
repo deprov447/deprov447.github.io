@@ -43,6 +43,5 @@ url = "index.xml"
 [[entries]]
 title = "PS: I can make better looking websites than this one, but..."
 entries = [
-   { title = "<a href='https://en.wikipedia.org/wiki/World_Wide_Web'>What actually is WWW</a>"},
-   { title = "<a href='https://motherfuckingwebsite.com/'>rant (nsfw)</a>" }
+   { title = "<a href='https://en.wikipedia.org/wiki/World_Wide_Web'>What actually is WWW</a>"}
   ]
