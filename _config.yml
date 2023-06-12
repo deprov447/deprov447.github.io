@@ -28,7 +28,7 @@ github:  https://github.com/deprov447
 # permalink: /:slug.html
 
 # Build settings
-# theme: no-style-please
+theme: no-style-please
 theme_config:
   appearance: "auto" # can be "light", "dark" or "auto"
   back_home_text: ".." # customize text for homepage link in post layout
