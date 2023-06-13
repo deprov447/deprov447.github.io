@@ -1,17 +1,4 @@
----
-title: "A Simple Git Tutorial"
-date: 2020-10-08T19:36:13+05:30
-draft: false
-author: "Me"
-ShowToc: true
-tags: ["git", "tutorial", "github", "development", "tech"]
-cover: 
-    image: "https://miro.medium.com/max/640/1*OC8FON9bhjFUr0CWF7KpUA.jpeg"
-    alt : "Git Gud or Git Rekt"
-    caption : "credit: Steam"
----
-
-## A Simple Git Tutorial
+A Simple Git Tutorial
 
 
 So new to Git and Github ? And wondering what is it ? Today we are gonna talk about these things. We will start off with Git. And once you understand git, everything related is quite easy; be it GitHub, Bitbucket, GitLab etc.

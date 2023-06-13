@@ -1,18 +1,4 @@
----
-title: "Code Comment - ary"
-date: 2022-11-20T03:53:02Z
-draft: true
-author: "Me"
-tags: ["general"]
-showTOC: false
-cover: 
-    image: ""
-    alt : "cover img"
-    caption : ""
----
-
-## Code Comment - ary
-
+Code Comment - ary
 
 > Programs must be written for people to read, and only incidentally for machines to execute.
 >  --- [Structure and Interpretation of Computer Programs](https://web.mit.edu/alexmv/6.037/sicp.pdf)

@@ -1,11 +1,4 @@
----
-title: "Linux Experience After 10 Months"
-date: 2020-10-05T14:18:22+05:30
-draft: false
-tags : ["linux", "tech"]
----
-
-## Linux Experience After 10 Months
+Linux Experience After 10 Months
 
 
 ![image](https://cdn.hashnode.com/res/hashnode/image/upload/v1633831682068/Ul3fMJoUY.jpeg)

@@ -1,12 +1,4 @@
----
-title: "Front Space"
-date: 2022-09-13T12:40:24+05:30
-draft: false
-author: "Me"
-tags: ["project","development","frontspace"]
----
-
-## Front Space: Create your portfolio in seconds
+Front Space: Create your portfolio in seconds
 
 Front Space is a platform to quickly create single-page websites and host them on a custom subdomain for the world to see. 
 

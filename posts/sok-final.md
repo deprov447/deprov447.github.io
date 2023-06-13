@@ -1,14 +1,4 @@
----
-title: "SoK Final Update"
-date: 2021-04-16T21:53:25+05:30
-draft: false
-author: "Anubhav Choudhary"
-tags: ["development","kde","tech","linux"]
-showTOC: false
----
-
-## Season of KDE 2021 Final Update
-
+Season of KDE 2021 Final Update
 
 <!-- inclde pics -->
 
