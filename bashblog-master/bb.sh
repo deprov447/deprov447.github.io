@@ -1004,7 +1004,7 @@ create_css() {
     # then use it. This directive is here for compatibility with my own
     # home page. Feel free to edit it out, though it doesn't hurt
     if [[ -f ../style.css ]] && [[ ! -f main.css ]]; then
-        ln -s "../style.css" "main.css" 
+        cp "../style.css" "main.css" 
     elif [[ ! -f main.css ]]; then
         echo 'body{font-family:Georgia,"Times New Roman",Times,serif;margin:0;padding:0;background-color:#F3F3F3;}
         #divbodyholder{padding:5px;background-color:#DDD;width:100%;max-width:874px;margin:24px auto;}
