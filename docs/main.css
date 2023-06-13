@@ -1,1 +1,176 @@
-../style.css
+a,
+a:visited {
+    text-decoration: none
+}
+
+#footer,
+hr {
+    text-align: center
+}
+
+.header,
+h3,Title on this line
+table {
+    width: 100%
+}
+
+body {
+    font-family: monospace;
+    min-height: 100%;
+    overflow-wrap: break-word
+}
+
+#divbody {
+    background-color: #fff;
+    padding: 0 48px 24px;
+    top: 0
+}
+
+.header {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 24px;
+    padding-bottom: 8px
+}
+
+.content {
+    margin-bottom: 5%
+}
+
+.nomargin,
+blockquote p {
+    margin: 0
+}
+
+.description {
+    margin-top: 10px;
+    padding: 10px 0
+}
+
+.w,
+img {
+    margin: 0 auto
+}
+
+h3 {
+    font-size: 20pt;
+    font-weight: 700
+}
+
+.clear {
+    clear: both
+}
+
+#footer {
+    padding-top: 10px;
+    border-top: 1px solid #666;
+    color: #333;
+    font-size: small
+}
+
+a {
+    color: #036 !important
+}
+
+a:visited {
+    color: #369 !important
+}
+
+blockquote {
+    background-color: #f9f9f9;
+    border-left: 4px solid #e9e9e9;
+    margin-left: 12px;
+    padding: 12px 12px 12px 24px
+}
+
+blockquote iframe {
+    margin: 12px 0
+}
+
+body,
+html {
+    max-width: 120ch;
+    padding: 3em 1em;
+    margin: auto;
+    line-height: 1.75;
+    font-size: 1.25em
+}
+
+html {
+    height: 100%
+}
+
+.post-meta {
+    text-align: right
+}
+
+hr {
+    border: 0;
+    margin: 2rem 0
+}
+
+p {
+    margin: 1rem 0
+}
+
+li {
+    margin: .4rem 0
+}
+
+:target {
+    background: #ff0
+}
+
+.w {
+    max-width: 640px;
+    padding: 4rem 2rem
+}
+
+hr:before {
+    content: '/////'
+}
+
+hr:after {
+    content: attr(data-content) '/////'
+}
+
+table,
+td,
+th {
+    border: thin solid #000;
+    border-collapse: collapse;
+    padding: .4rem
+}
+
+code {
+    color: #fff;
+    background: #000
+}
+
+div.highlighter-rouge code {
+    display: block;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    padding: 1rem
+}
+
+ol,
+p,
+ul {
+    margin-bottom: 2em;
+    color: #1d1d1d
+}
+
+img {
+    max-width: 100%;
+    display: block
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 3em 0 1em
+}
