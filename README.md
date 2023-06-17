@@ -18,6 +18,8 @@
 - `cd docs`
 - `EDITOR=vim.tiny ../bin/bb.sh post <blog.md or blog.html>`
 - `:wq` and `p`
+- `rm index.html`
+- `mv all_posts.html index.html`
 
 > keep alive a dev server: `python3 -m http.server 8000`
 
