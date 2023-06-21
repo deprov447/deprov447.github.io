@@ -1,26 +1,17 @@
-# My Blog
+# deprov447.github.io
 
-## Steps
+## Dependency
+- Just: 
+    ```bash
+        DEST=~/.local/share/bin/
+        curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to $DEST
+    ```
+- python3
+- markdown
+- vim-tiny
 
-### First time setup
+## New post
+- `just install_deps`
+- `just post <post.md>`
 
-> You don't need this repo.
-
-- `sudo apt install markdown vim.tiny`
-- `mkdir ./bin`
-- `curl -lO https://raw.githubusercontent.com/cfenollosa/bashblog/master/bb.sh > ./bin/bb.sh`
-- Create a ./style.css
-- Create a .config
-- `mkdir docs`
-- `cp .config ./docs`
-
-### New post
-- `cd docs`
-- `EDITOR=vim.tiny ../bin/bb.sh post <blog.md or blog.html>`
-- `:wq` and `p`
-- `rm index.html`
-- `mv all_posts.html index.html`
-
-> keep alive a dev server: `python3 -m http.server 8000`
-
-@posts by me
+> For a live server: `just`
