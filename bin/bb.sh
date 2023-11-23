@@ -34,7 +34,7 @@ global_variables() {
     global_email="john@smith.com"
 
     # CC by-nc-nd is a good starting point, you can change this to "&copy;" for Copyright
-    global_license="CC by-nc-nd"
+    global_license="MIT"
 
     # If you have a Google Analytics ID (UA-XXXXX) and wish to use the standard
     # embedding code, put it on global_analytics
@@ -138,13 +138,13 @@ global_variables() {
     template_twitter_comment="&lt;Type your comment here but please leave the URL so that other people can follow the comments&gt;"
     
     # The locale to use for the dates displayed on screen
-    date_format="%B %d, %Y"
+    date_format=" "
     date_locale="C"
     date_inpost="bashblog_timestamp"
     # Don't change these dates
     date_format_full="%a, %d %b %Y %H:%M:%S %z"
     date_format_timestamp="%Y%m%d%H%M.%S"
-    date_allposts_header="%B %Y"
+    date_allposts_header=" "
 
     # Perform the post title -> filename conversion
     # Experts only. You may need to tune the locales too
@@ -439,6 +439,7 @@ create_html_page() {
     # Create the actual blog post
     # html, head
     {
+        author=""
         cat ".header.html"
         echo "<title>$title</title>"
         google_analytics
@@ -449,11 +450,13 @@ create_html_page() {
         [[ $filename = $index_file* ]] && [[ -n $body_begin_file_index ]] && cat "$body_begin_file_index"
         # body divs
         echo '<div id="divbodyholder">'
-        echo '<div class="headerholder"><div class="header">'
-        # blog title
-        echo '<div id="title">'
-        cat .title.html
-        echo '</div></div></div>' # title, header, headerholder
+        if [[ $index == yes ]]; then
+            echo '<div class="headerholder"><div class="header">'
+            # blog title
+            echo '<div id="title">'
+            cat .title.html
+            echo '</div></div></div>' # title, header, headerholder
+        fi
         echo '<div id="divbody"><div class="content">'
 
         file_url=${filename#./}
@@ -467,18 +470,6 @@ create_html_page() {
             title=${title//<\/p>/}
             echo "$title"
             echo '</a></h3>'
-            if [[ -z $timestamp ]]; then
-                echo "<!-- $date_inpost: #$(LC_ALL=$date_locale date +"$date_format_timestamp")# -->"
-            else
-                echo "<!-- $date_inpost: #$(LC_ALL=$date_locale date +"$date_format_timestamp" --date="$timestamp")# -->"
-            fi
-            if [[ -z $timestamp ]]; then
-                echo -n "<div class=\"subtitle\">$(LC_ALL=$date_locale date +"$date_format")"
-            else
-                echo -n "<div class=\"subtitle\">$(LC_ALL=$date_locale date +"$date_format" --date="$timestamp")"
-            fi
-            [[ -n $author ]] && echo -e " &mdash; \n$author"
-            echo "</div>"
             echo '<!-- text begin -->' # This marks the text body, after the title, date...
         fi
         cat "$content" # Actual content
@@ -684,7 +675,7 @@ all_posts() {
         done < <(ls -t ./*.html)
         echo "" 1>&3
         echo "</ul>"
-        echo "<div id=\"all_posts\"><a href=\"./$index_file\">$template_archive_index_page</a></div>"
+        echo "<div id=\"all_posts\"></div>"
     } 3>&1 >"$contentfile"
 
     create_html_page "$contentfile" "$archive_index.tmp" yes "$global_title &mdash; $template_archive_title" "$global_author"
@@ -719,7 +710,7 @@ all_tags() {
         done
         echo "" 1>&3
         echo "</ul>"
-        echo "<div id=\"all_posts\"><a href=\"./$index_file\">$template_archive_index_page</a></div>"
+        echo "<div id=\"all_posts\"></div>"
     } 3>&1 > "$contentfile"
 
     create_html_page "$contentfile" "$tags_index.tmp" yes "$global_title &mdash; $template_tags_title" "$global_author"
