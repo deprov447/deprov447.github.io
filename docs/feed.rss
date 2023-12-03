@@ -2,9 +2,571 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>deprov447's</title><link>https://deprov447.github.io/index.html</link>
 <description>Nothing, just something</description><language>en</language>
-<lastBuildDate>Wed, 14 Jun 2023 00:29:52 +0530</lastBuildDate>
-<pubDate>Wed, 14 Jun 2023 00:29:52 +0530</pubDate>
+<lastBuildDate>Sun, 03 Dec 2023 22:21:40 +0530</lastBuildDate>
+<pubDate>Sun, 03 Dec 2023 22:21:40 +0530</pubDate>
 <atom:link href="https://deprov447.github.io/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+creating a POC terminal emulator
+</title><description><![CDATA[
+
+<h1>what is a terminal emulator?</h1>
+
+<p>the thing that appears when you press <code>ctrl shift t</code> on a linux system, maybe xterm, maybe konsole, maybe st etc. so basically in the olden days there were these gigantic machines, (computer), and talking to it requires you to enter commands on <a href="https://en.wikipedia.org/wiki/Teleprinter">teletype</a> (this is from where term <code>tty</code> come, more later) and the output gets printed on a sheet of paper. watch <a href="https://www.youtube.com/watch?v=2XLZ4Z8LpEE">this</a> amazing video for an idea, at least the last part.</p>
+
+<p>but those days are no more. now most of the screens you see on a computer is a GUI. but still there is a major requirement for TUI, or somewhere you can enter a command and get a output. that is terminal emulators. why 'emulators'? because GUI itself is mostly a process running on a shell. don't believe me? try cycling through <code>ctrl alt f1</code>, <code>ctrl alt f2</code>, <code>ctrl alt f3</code> and so on. you will see the command prompt like things, and one of these will be running your X server.</p>
+
+<p>these are called <code>tty</code>s, like <code>tty1</code>, <code>tty2</code> etc. what we want is now, to use these <code>tty</code> like interfaces in your X server (GUI). ie. terminal emulators</p>
+
+<h1>how to build one?</h1>
+
+<p>now in linux, there are something called pseudoterminals, which help us make terminal emulators. what are pseudoterminals? they are these devices on linux, on which you can write commands, and read output from there. they follow the master-slave architecture, and in general, how it works is, you write a command to the master file, that command is read by a shell process attached to a slave file, that shell process runs the specific command and write its output in the same slave file, then this output is copied to master file, and finally you can read the output from master file.</p>
+
+<p>enough for the theory. lets get building. <code>man pts</code> will show almost everything you need to know. so the whole process is simple, and in words:</p>
+
+<ul>
+<li>open master file, generally <code>/dev/ptmx</code>, you will get a file descriptor (call it master file descriptor)</li>
+<li>pass this master file descriptor to <code>ptsname()</code> to get a slave file path</li>
+<li>run the <code>grantpt()</code> and <code>unlockpt()</code> functions on master file descriptor</li>
+<li>open the slave file and get a slave file descriptor</li>
+<li>fork a child process, redirect its I/O control to slave file, and replace the process with a shell</li>
+<li>in the main process. write commands, and read output from master file</li>
+</ul>
+
+<p>last step is where you can get creative, create a GUI window, to make this reading and writing of commands, or proxy these things through a web server, and get a <em>terminal website</em> . but in <a href="https://github.com/deprov447/terme">my example</a>, i did nothing of this sort. simply wrote a single command <code>whoami</code>, read its output, and printed it to stdio.</p>
+
+<p>that's it, that's your poc terminal ready. just note that pseudoterminals did a lot of <a href="(https://linux.die.net/man/7/pty)">heavy lifting</a> for you.</p>
+
+<!-- text end -->
+]]></description><link>https://deprov447.github.io/creating-a-poc-terminal-emulator.html</link>
+<guid>https://deprov447.github.io/./creating-a-poc-terminal-emulator.html</guid>
+<dc:creator></dc:creator>
+<pubDate>Sun, 03 Dec 2023 22:21:38 +0530</pubDate></item>
+<item><title>
+LFX Mentorship For Me
+</title><description><![CDATA[
+
+<p>Hi everyone, I recently completed my LFX Mentorship project. I was a mentee for the LFXM summer term of 2022 at Pixie, a CNCF sandbox project donated by The New Relic. </p>
+
+<p>In this blog, I will be sharing my experience of mentorship. 
+(TLDR; just awesome, one-of-a-kind experience &lt;3)</p>
+
+<p>If you're also applying for this (which every open-source newbie should), or have a doubt, feel free to <a href="https://linktr.ee/deprov447">drop me a message</a>. I'd be more than happy to help.</p>
+
+<h3>What is LFX Mentorship?</h3>
+
+<p>Let's start this by knowing about The Linux Foundation. The Linux Foundation (LF) is a non-profit organization, that standardizes the development of the Linux kernel and also promotes open source projects such as Kubernetes, GraphQL, Hyperledger, RISC-V, Xen project, etc.</p>
+
+<p>The Linux Foundation Mentorship is a program run by LF, which helps developers with the necessary skills and resources to learn and contribute to open source projects, through 3 or 6 months of internship. During this period, the mentee is guided through the development workflow and methodologies used by open source organizations, through a project.</p>
+
+<h3>Selection procedure</h3>
+
+<p>I've been involved in open source for some time and have been applying for the mentorship, but got rejected every time. </p>
+
+<p>This time also I was going through the projects and found a particularly interesting project. It was about parsing a protocol. This took my eye as at that time I was learning networking and experimenting a lot with communications. So naturally, I got interested. After reading the project details, I went to the project's slack channel to find a mentor. Omid, one of Pixie's founding engineers, was kind enough to reply to my message and asked for a quick call. </p>
+
+<p>I talked to him and told him about my interest and how I made a preliminary Mongo wire protocol parser using Node.js as preparation. He seemed satisfied with this and told me about further steps and time commitment.</p>
+
+<p>Other formalities included submitting a cover letter, and my resume. </p>
+
+<p>A few days later got this:
+!<a href="https://cdn.hashnode.com/res/hashnode/image/upload/v1654069377514/mINbQmBcw.png align=" title="center">Acceptance Email</a></p>
+
+<p>Finally, after applying so many times, got selected !!!</p>
+
+<h3>Month 1</h3>
+
+<p>Started, and was introduced to my mentor Yaxiong Zhao, another founding engineer at Pixie. He told me about what we were going to do in the next 3 months. He demoed me the Pixie UI and explained to me the working of it, and how pixie catches packets (hint: <a href="https://docs.px.dev/about-pixie/pixie-ebpf/#title">eBPF</a>). And then sent me the AMQP spec sheet, and how it needs to be implemented using C++. </p>
+
+<p>Yes, the protocol changed from Mongo to AMQP, and the language from Node.js to C++. But I guess a very important survival quality of industry is being flexible.</p>
+
+<p>So, in the first month, I got a theoretical knowledge about AMQP wire spec and experimented with it by deploying a local RabbitMQ server, and monitoring packets using Wireshark. My mentor also tried helping me build Pixie on my local machine, but we failed, even after switching distros. At last, we were able to set up my dev environment inside a container.</p>
+
+<p>...quite a month</p>
+
+<h3>Month 2</h3>
+
+<p>In the first half of this month, I continued my research on AMQP (apparently implementing a protocol required a lot of extensive reading) and found analogies of it with protocols I was already familiar with, and kept on manually experimenting with packet translation.</p>
+
+<p>3rd week of the month, It was finally time for me to start writing some code. Okay, so this was the difficult part. Having very limited knowledge of C++, continued forward. But my mentor was being an angel at this point, very patiently explaining to me, and pointing me in the right direction, making me understand every lex required. I started with implementing a data structure for storing and creating relations between packets. After some effort, finally got my PR merged.</p>
+
+<p>!<a href="https://cdn.hashnode.com/res/hashnode/image/upload/v1654167110197/HguzJlWmJ.png align=" title="center">Commit</a></p>
+
+<h3>Month 3</h3>
+
+<p>Continuing my code work, I started building a parser code. Yaxiong was very patient and helpful during this time, sending me blogs, and guides and explaining to me every little doubt I had. Thanks to him I was able to finally submit my preliminary code for parsing the code. </p>
+
+<p>And a final thing for this was to write tests. Learned google's C++ testing library. Wrote code, pushed.</p>
+
+<h3>Concluding the program</h3>
+
+<p>Like every good thing, this also came to an end. 12 weeks just fly by --- faster than you can think --- The program opened up a new world of open source and got me introduced to a lot of professional tools and etiquette. I appreciate the time and efforts my mentor put into this program.</p>
+
+<p>!<a href="https://cdn.hashnode.com/res/hashnode/image/upload/v1654569241516/YnOCZ9G6Z.jpeg align=" title="center">Email</a></p>
+
+<p>Completing this internship was a dream come true, dodging tonnes of problems: internet, college, placement preparation, exams, everything. At many points in the internship, I was very certain I won't be able to complete the project. but:</p>
+
+<blockquote>
+  <p>At some point, everything's gonna go south on you... everything's going to go south and you're going to say, this is it. This is how I end. Now you can either accept that, or you can get to work. That's all it is. You just begin. You do the math. You solve one problem... and you solve the next one... and then the next. And If you solve enough problems, you get to come home.</p>
+</blockquote>
+
+<p>-- Tail ender, The Martian.</p>
+
+<!-- text end -->
+]]></description><link>https://deprov447.github.io/lfx-mentorship-for-me.html</link>
+<guid>https://deprov447.github.io/./lfx-mentorship-for-me.html</guid>
+<dc:creator>Anubhav Choudhary</dc:creator>
+<pubDate>Sun, 03 Dec 2023 22:18:04 +0530</pubDate></item>
+<item><title>
+Front Space: Create your portfolio in seconds
+</title><description><![CDATA[
+
+<p>Front Space is a platform to quickly create single-page websites and host them on a custom subdomain for the world to see. </p>
+
+<h1>A Quick Back Story</h1>
+
+<p>I am always fascinated with beautiful web designs and portfolios. I randomly scroll through Product Hunt and r/web_design. And this app is basically a result of that only. For a long time, I had been thinking of making such an app, but couldn't find the motivation. But thanks to Hashnode and Linode, here we are.</p>
+
+<h1>Walkthrough</h1>
+
+<div style=" width:100px"><iframe src="https://frontspace.trainn.co/share/yzX4g9NRYP4oJDCPRFC5pQ/embed?autoplay=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; fullscreen" style="width:1000px; height: 500px"></iframe></div>
+
+<p><br/></p>
+
+<h1>Build with</h1>
+
+<p>Of course, love. But also a number of amazing technologies.</p>
+
+<h2>Front end</h2>
+
+<p>OK, so the front end is completely made with <strong>React.js</strong>. I've also used an awesome component library called <strong>Chakra UI</strong>. The front end is then deployed on <strong>Netlify</strong>, which also provided me with a fantastic CI/CD pipeline for deployment previews.And lastly, I've used <strong>Framer Motion</strong> to render some animations.</p>
+
+<h2>Back end</h2>
+
+<p>Next is the back end. The back end of our application is an <strong>Express app</strong>, running on top <strong>Node.js</strong>. I've used  <strong>Passport.js and jsonwebtoken both</strong> for handling authentication. (I'd love to blog about this if anyone's interested)</p>
+
+<h2>Deployment</h2>
+
+<p>Lastly, the deployment. So the back end is deployed on <strong>Linode</strong>, which provided an awesome $100 credit (recommended to check this out, the instances are as cheap as $5 a month). Next, I used Docker and <strong>Docker Compose</strong> for containerization and easy deployment of applications. And <strong>Nginx</strong> to reverse proxy the inbound traffic to docker instance.</p>
+
+<h2>Other</h2>
+
+<ul>
+<li><p><strong>Gitpod</strong>: an awesome cloud IDE</p></li>
+<li><p><strong>Github actions</strong></p></li>
+<li><p><strong>Cloudflare</strong>: DNS management</p></li>
+<li><p><strong>Hostinger</strong>: domain</p></li>
+</ul>
+
+<h1>Some Pages Made</h1>
+
+<p><img src="https://api.microlink.io?url=https%3A%2F%2Fhimniz.getfront.space&amp;overlay.browser=dark&amp;overlay.background=%2300000000&amp;screenshot=true&amp;meta=false&amp;embed=screenshot.url" alt="img3" title="" /></p>
+
+<p>!<a href="https://api.microlink.io?url=https%3A%2F%2Fdeprov447.getfront.space&amp;overlay.browser=dark&amp;overlay.background=%2300000000&amp;screenshot=true&amp;meta=false&amp;embed=screenshot.url align=" title="center">img2</a></p>
+
+<p>!<a href="https://api.microlink.io?url=https%3A%2F%2Fprinsu-pyaara.getfront.space&amp;overlay.browser=dark&amp;overlay.background=%2300000000&amp;screenshot=true&amp;meta=false&amp;embed=screenshot.url align=" title="center">img1</a></p>
+
+<h1>Links</h1>
+
+<p><strong>Website:</strong> <a href="https://getfront.space">https://getfront.space</a></p>
+
+<p><strong>Source code:</strong> <a href="https://github.com/deprov447/frontspace">https://github.com/deprov447/frontspace/</a></p>
+
+<h1>Contribute</h1>
+
+<p><img src="https://i.imgur.com/OwvD1q6.jpg" alt="It ain't much, but it's honest work." title="" /></p>
+
+<p>I know the app has a number of flaws, and I'm continuously working to make it a good product. But to achieve that, your help is needed. </p>
+
+<p>If you find any flaw in the app, please file an issue on <a href="https://github.com/deprov447/frontspace/issues/new/choose">Github</a>. Or feel free to <a href="mailto:deprov447+frontspace.protonmail.com">mail me</a>. </p>
+
+<p>And if you can, contribute &lt;3</p>
+
+<!-- text end -->
+]]></description><link>https://deprov447.github.io/front-space-create-your-portfolio-in-seconds.html</link>
+<guid>https://deprov447.github.io/./front-space-create-your-portfolio-in-seconds.html</guid>
+<dc:creator>Anubhav Choudhary</dc:creator>
+<pubDate>Fri, 24 Nov 2023 20:01:12 +0530</pubDate></item>
+<item><title>
+Kernel Based Virtualization
+</title><description><![CDATA[
+
+<p><strong>KVM (Kernel-based Virtual Machine)</strong> is an open source, full virtualization solution for x86 hardwares containing virtualization extensions. It is a hypervisor built into the Linux kernel and unlike regular VM players like Virtualbox and VMware which use emulation, KVM uses CPU extensions for hardware assisted virtualization via a kernel module (thats the secret for that blazing speed). 
+Each virtual machine has private virtualized hardware: a network card, disk, graphics adapter and all the peripherals. </p>
+
+<blockquote>
+  <p>This thing is, it's only for Linux.
+For Windows it is <a href="https://github.com/ddk50/winkvm">developing</a></p>
+</blockquote>
+
+<p>In this blog post, we will learn how to setup all the required components one by one, to finally be able to create a hardware accelerated VM.
+  ## KVM</p>
+
+<blockquote>
+  <p>KVM is a hardware based thing, and therefore has some hardware prerequisites. More straightly, to be able to run a kernel based virtual machine, your processor <strong>must</strong> have hardware virtualization compatibility (Nowadays most of them provide this)</p>
+
+<p>Hardware virtualization enables a CPU to act as if you have several independent computers, in order to enable several operating systems to run at the same time on the same machine. Fortunately, both AMD and Intel have dedicated extensions to provide the functionality. AMD has AMD-V and Intel has VT-x.</p>
+</blockquote>
+
+<p>1) To check whether your processor is compatible or not, run</p>
+
+<p><code>LC_ALL=C lscpu | grep Virtualization</code></p>
+
+<p>or</p>
+
+<p><code>grep -E --color=auto 'vmx|svm|0xc0f' /proc/cpuinfo</code></p>
+
+<p>If nothing appears, your best bet is that it maybe disabled by BIOS. So, head over to BIOS menu and enable <strong>Hardware virtualization</strong> (or something sounding similar. Every vendor has it's own set of nomenclature in these situations :/ ). </p>
+
+<p>After that, head to revert back to the starting of step 1.</p>
+
+<p>If still nothing happens, and if nothing <em>very wild</em> is going on, probably your device doesn't support this and you will not be able to use KVM.</p>
+
+<p>2) Now that you know your system is compatible from hardware side, it's time for software compatibility test. </p>
+
+<blockquote>
+  <p>KVM requires some kernel module (most probably you maybe having them already) : 
+   - <strong>kvm.ko</strong>, that provides the core virtualization infrastructure <br />
+   - A processor specific module, <strong>kvm-intel.ko</strong> or <strong>kvm-amd.ko</strong>.  </p>
+
+<p>The Userspace component of KVM is included in mainline QEMU, as of 1.3 and Kernel Component of KVM is in <a href="https://git.kernel.org/pub/scm/virt/kvm/kvm.git/tree/">mainline LINUX kernel</a>. And that's how you know this isn't some random mod/trick off the internet.</p>
+</blockquote>
+
+<p>To check if you have the required modules in your kernel, run the following command :</p>
+
+<p><code>zgrep CONFIG_KVM /proc/config.gz</code> </p>
+
+<p>Outputs should be either <code>y</code> or <code>m</code>.</p>
+
+<p>And then check if these modules are loaded or not</p>
+
+<p><code>lsmod | grep kvm</code></p>
+
+<p>If the modules are not loaded (i.e. if the command doesn't output anything), you have to <a href="https://wiki.archlinux.org/index.php/Kernel_module#Manual_module_handling">manually load them</a>.</p>
+
+<blockquote>
+  <p>If modprobing <em>kvm_intel</em> or <em>kvm_amd</em> fails but modprobing <em>kvm</em> succeeds, and <code>lscpu</code> claims that hardware acceleration is supported,  check the BIOS settings. Some vendors, especially laptop vendors, disable these processor extensions by default. To determine whether there is no hardware support or whether the extensions are disabled in BIOS, the output from <code>sudo dmesg --level=err,warn</code> after having failed to modprobe will tell.  </p>
+</blockquote>
+
+<p>And you're ready now.</p>
+
+<h2>virtio API</h2>
+
+<p>The next layer of abstraction is <strong>virtio API</strong>. To setup this, we have to go though some module tests, as we did in kvm's setup.</p>
+
+<p>Check if Virtio module is there in your kernel.</p>
+
+<p><code>zgrep VIRTIO /proc/config.gz</code> </p>
+
+<p>and then check if it is loaded (actually there are a list of modules to be checked, given below the command)</p>
+
+<p><code>lsmod | grep virtio</code></p>
+
+<p>Don't worry if they are not loaded, we will load them by ourselves :</p>
+
+<ul>
+<li>network device : <code>modprobe virtio-net</code></li>
+<li>block device : <code>modprobe virtio-blk</code></li>
+<li>controller device : <code>modprobe virtio-scsi</code></li>
+<li>serial device : <code>modprobe virtio-serial</code></li>
+<li><p>balloon device : <code>modprobe virtio-balloon</code></p>
+
+<blockquote>
+  <p>Doesn't matter if some modules are not loaded, or not found. (we may face problems later, but who cares for later? )</p>
+</blockquote></li>
+</ul>
+
+<h2>QEMU</h2>
+
+<p>Now that the CPU is being <em>emulated</em> (hmm?) by KVM, we need to emulate other devices, like USB peripherals, display, HDD etc. Here is when QEMU (Quick Emulator) comes in action.</p>
+
+<p>Install QEMU with your package manager. </p>
+
+<p><code>pacman -S qemu</code></p>
+
+<p>From this point you are ready to create virtual machines and run them. But this will include a lot of command line instructions, no GUI and bare minimum funtionality. So we will add some more wrappers.</p>
+
+<h2>libvirt</h2>
+
+<p>There are a <a href="https://www.linux-kvm.org/page/Management_Tools">lot of tools</a> available for KVM management. Go through them once and see if something catches your eye.</p>
+
+<p>I use libvirt for KVM management and thats what I can talk about :)</p>
+
+<p>So <a href="http://libvirt.org/">Libvirt</a> is collection of software that provides a convenient way to manage virtual machines and other virtualization functionality, such as storage and network interface management.libvirt is the wrapper which will control QEMU. So libvirt will control the KVM and QEMU both in short for us.</p>
+
+<p>Install libvirt.</p>
+
+<p><code>pacman -S libvirt</code></p>
+
+<p>Start libvirt daemon,</p>
+
+<p><code>systemctl start libvirtd.service</code></p>
+
+<blockquote>
+  <p>You may want to use your init system, but if it is systemd (which is the most popular one), above command will work.</p>
+</blockquote>
+
+<p>libvirt keeps it's files at <code>/var/lib/libvirt/</code>. And this is where would gigantic virtual drives will live too (probably as <code>qcow</code> files), so its worth knowing.</p>
+
+<p>Libvirt provides a CLI tool to control the VMs, called virsh. But we are going to install a GUI tool too.</p>
+
+<h2>virt-manager</h2>
+
+<p>So, <a href="https://virt-manager.org/">virt-manager</a> is our last layer of abstraction. This gives us the required GUI to talk to the VMs. Now instead of typing commands, you can click buttons.</p>
+
+<p><code>pacman -S virt-manager</code></p>
+
+<p>there are also some extra tools which you may require:</p>
+
+<p><code>pacman -S virt-install virt-viewer</code></p>
+
+<h2>(cherry on the top)</h2>
+
+<p>Install these </p>
+
+<p><code>pacman -S ebtables dnsmasq iptables bridge-utils openbsd-netcat</code></p>
+
+<ul>
+<li><strong>ebtables</strong> is used  for setting NAT</li>
+<li><strong>dhclient</strong> provides dhcp resolution (You most probably have this one installed)</li>
+<li><strong>dnsmasq</strong> is used to provide IP addresses to VMs</li>
+<li><strong>bridge-utils</strong> is used to create bridge iterfaces</li>
+<li><strong>openbsd-netcat</strong> provides functionality to SSH into our VM</li>
+</ul>
+
+<p>Now you are all set up to fire a VM and play that 4k video, without frying your system. Wait no, not really. Although you can now start VMs, there is a lot of <strong>configuration</strong> that needs to be done to achieve that bare-metal performance, but thats a topic for another day.</p>
+
+<p>See this : https://www.linux-kvm.org/page/HOWTO</p>
+
+<!-- text end -->
+]]></description><link>https://deprov447.github.io/kernel-based-virtualization.html</link>
+<guid>https://deprov447.github.io/./kernel-based-virtualization.html</guid>
+<dc:creator>Anubhav Choudhary</dc:creator>
+<pubDate>Fri, 24 Nov 2023 20:01:12 +0530</pubDate></item>
+<item><title>
+Linux Experience After 10 Months
+</title><description><![CDATA[
+
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1633831682068/Ul3fMJoUY.jpeg" alt="image" title="" /></p>
+
+<p>Its been around 10 months of me using Linux as my primary OS. I bought my laptop on Jan 1st, 2020 (yes :D) and today its Oct 5th (technically been 9 months, but okay). So let me share my experience regarding the same.</p>
+
+<h3>Starting / Booting Up</h3>
+
+<p>So immediately after getting my laptop, I downloaded an Ubuntu 18.04 LTS ISO image and flashed it on a pen drive. Then booted the laptop using that. The best thing was that I can just try out the new OS without having to install it on HDD. After an hour or so of playing, finally installed Ubuntu. The toughest part till now was installing GRUB and its configuration but everything else was quite easy, just had to follow an online guide. (I always tend to follow some documentation or guide while working with a new piece of code)</p>
+
+<h3>Familiarization</h3>
+
+<p>Then was the time to walk around. I tried out some applications, changed settings and gone through the file system. I tried out some beginner commands too on CLI, just to get a feel. At this time typing something on CLI felt like wastage of keystrokes, as the same task can be done using GUI. So I gave weightage to mouse over keyboard (but wasn’t long until the unleash of beast). Another thing I felt was, why would someone try and install some software using CLI, instead of downloading its setup? (realized later, its much easier than having to download 10 missing DLLs to run FIFA). So speaking boldly, This is the time when Linux feels like an extra effort for simple stuff. But believe me, this feeling will recede from view in a week (as it did).</p>
+
+<h3>The Learning Phase</h3>
+
+<p>Now that I was comfortable with simple task, It was the time to learn some stuff. Linux has a universe of tutorials and guides. So I just started reading stuff. In a month or two of reading ,learning, and experimenting, I was familiar with:</p>
+
+<ul>
+<li>File system structure</li>
+<li>Most of the basic commands</li>
+<li>Kernel, Bootloader, BIOS</li>
+<li>Desktop Environment</li>
+<li>Various flavors and distributions</li>
+<li>Package Managers</li>
+</ul>
+
+<p>And some other stuff (which I can’t recall). By this time I abandoned the Ubuntu GNOME, and after trying a lot of things like Kubuntu, Xubuntu, Kali Linux, Parrot, Mint etc, I decided to settle with Kubuntu 20.04 LTS for the time being (mostly because of its balance of features and UI).
+Image for post
+Image for post
+My Current Linux Desktop</p>
+
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1633831684141/jPNMqwMkS.jpeg" alt="" title="" /></p>
+
+<h3>Diving Deeper</h3>
+
+<p>Now was the time to dig deeper. I started playing with config files and core system related stuff (daredevil xD). Broke much stuff, reinstalled the OS quite a number of time, but learning. By now, I was able to understand most of the things I was seeing and doing. This is somewhat satisfying. And to be honest, I think there is no end to this phase, just high scores.</p>
+
+<h3>Giving Back What Is Taken</h3>
+
+<p>This sections’ heading seems misleading, but the gist is Now that you understand Linux, let Linux understand you. That is to start contributing. Most of the Linux is open sourced and is maintained by ‘code charity’. So started contributing to various Linux applications. This way i am being a part of the enormous open source community as well as paying for my free OS (didn’t I told you? almost everything here is free, sorry Windows).</p>
+
+<h3>Final Thoughts</h3>
+
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1633831685996/QRo9ZYQtb.png" alt="" title="" /></p>
+
+<p>So that I have used Linux for sometime, I think I can form an opinion now. Although Linux may seem very intimidating and have quite a learning curve, but believe me there is much more stuff one can do with Linux than with Windows / Mac. You can literally control each and every aspect of your system. And most of all you’re learning a computers’ core 101.</p>
+
+<!-- text end -->
+]]></description><link>https://deprov447.github.io/linux-experience-after-10-months.html</link>
+<guid>https://deprov447.github.io/./linux-experience-after-10-months.html</guid>
+<dc:creator>Anubhav Choudhary</dc:creator>
+<pubDate>Fri, 24 Nov 2023 20:01:12 +0530</pubDate></item>
+<item><title>
+Season of KDE 2021 Final Update
+</title><description><![CDATA[
+
+<!-- inclde pics -->
+
+<p>Hello again everyone,
+I wrote my last update related to Season of KDE in January, and now is the time for the final update. I am sorry I couldn't write blogs in between. The 3 months passed by like at supersonic speed.</p>
+
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1633831669757/YYuc8uJV4.png" alt="Calamares Logo" title="" /></p>
+
+<p>So I was selected to work on <a href="github.com/calamares/calamares">Calamares project</a> under Adriaan de Groot. Most of my work revolved around the functionality of sending the installation logs to paste server online. This feature would help distro maintainers, calamares developers as well as the end users to pin point the errors that possibly may have caused installation to stop (if that happens).</p>
+
+<p>First of all there was some basic (but important) <a href="https://github.com/calamares/calamares/pull/1186">code</a> work by <a href="https://github.com/bill-auger">Bill Auger</a>. My duty was to convert this work into a functionality, so that it is customizable and a distro maintainer can use the functionality without having to go through all the codebase. Currently a maintainer can easily setup the paste feature after tweaking a <a href="https://github.com/calamares/calamares/blob/2a9205ebd972999dbb3b91dda513dc67742346ad/src/branding/default/branding.desc#L222">configuration file</a>. The customizations offered are : the type of server to paste the data, the specific server (url) to paste the data and the maximum size of data to be send to that server (last one is under <a href="https://github.com/calamares/calamares/pull/1666">review</a>).</p>
+
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1633831672114/OrQta2T_8.json" alt="Current paste feature" title="" /></p>
+
+<p>Then some of the smaller works included hiding the next/prev buttons when calamares is actually installing and adding an option to skip the bootloader installation for EFI system.</p>
+
+<h3>Conclusion</h3>
+
+<p>All and all Season of KDE has been a wonderful experience for me. The programme taught me how to write some good, real-world code and how to collaborate with others. Calamares IRC channel was super helpful to me, people are really nice and know their stuff. A special thank to  Adriaan, who used to teach me some seemingly complicated things in the easiest words. Although I never really understood why he randomly writes <code>:momo</code> in the channel xD.</p>
+
+<!-- text end -->
+]]></description><link>https://deprov447.github.io/season-of-kde-2021-final-update.html</link>
+<guid>https://deprov447.github.io/./season-of-kde-2021-final-update.html</guid>
+<dc:creator>Anubhav Choudhary</dc:creator>
+<pubDate>Fri, 24 Nov 2023 20:01:12 +0530</pubDate></item>
+<item><title>
+Season of KDE Selection
+</title><description><![CDATA[
+
+<p>Hey people from around the world !!</p>
+
+<p>I am Anubhav Choudhary, an engineering student from India. I recently got selected in <a href="https://season.kde.org">Season of KDE 2021</a> to work under <a href="https://calamares.io">Calamares</a> project. My work is to resolve numerous issues and complete some tasks mentioned on <a href="https://github.com/calamares/calamares/labels/hacktoberfest">Calamares' Issue page</a>.  And I am just too excited about that. Why? Because I have been contributing to open source (to KDE? yes) for sometime now. But It always felt very unordered and random contributions (which I was not happy about). But now that I'm in SoK and things are preplanned, hopefully these next 3 months will be smooth and calm.</p>
+
+<p>A big thank to <strong>Carl Schwan</strong> and <strong>Adriaan de Groot</strong>  for help and mentorship.</p>
+
+<p>I would be writing some more blogs as I proceed forward to contribute in Calamares. I would love to hear from you readers (feedback, suggestions, comments anything).</p>
+
+<p><em>IRC: @deprov447:kde.org
+ Telegram: t.me/deprov447</em></p>
+
+<p>Thanks for reading and long live open source :)</p>
+
+<!-- text end -->
+]]></description><link>https://deprov447.github.io/season-of-kde-selection.html</link>
+<guid>https://deprov447.github.io/./season-of-kde-selection.html</guid>
+<dc:creator>Anubhav Choudhary</dc:creator>
+<pubDate>Fri, 24 Nov 2023 20:01:12 +0530</pubDate></item>
+<item><title>
+A Simple Git Tutorial
+</title><description><![CDATA[
+
+<p>So new to Git and Github ? And wondering what is it ? Today we are gonna talk about these things. We will start off with Git. And once you understand git, everything related is quite easy; be it GitHub, Bitbucket, GitLab etc.</p>
+
+<h2>So What Is Git ?</h2>
+
+<p>Git is a merely a development tool, which has nothing to do with your application itself, but adds to the productivity and manageability of code.</p>
+
+<p>More formally speaking, Git is a <strong>Version Control Tool</strong>. i.e. it helps in maintaining different versions and releases of the software.</p>
+
+<h2>Installation</h2>
+
+<p>Type out 'Download Git' on Google and download it directly from the official website. Just install it like any other software. And voila! its good to go</p>
+
+<blockquote>
+  <p>Powershell, command prompt, bash, terminal, shell... everything is same for us for now. We are gonna use them interchangeably. You can open anyone and you're good to go.</p>
+</blockquote>
+
+<h2>Initialising a directory/folder with Git</h2>
+
+<p>Firstly we have to tell the system that some folder is a git repository (Repository is basically like a folder). This can be done by opening a shell in the folder to be initialized. Then enter the command</p>
+
+<p><code>git init</code></p>
+
+<p>This will create an empty git repository for you. Going forward..</p>
+
+<h2>Saving the state of repository</h2>
+
+<p>Lets say you made some changes to your code and want to save the state of the directory at that moment, so that in future you can revert back to that state, if needed. So you would have to do these two things:</p>
+
+<p><code>git add [name_of_file]</code></p>
+
+<p><code>git commit -m ["some_meaningful_message"]</code></p>
+
+<blockquote>
+  <p>Replace [content] with the corresponding content throughout this article. For ex: <em>git add index.html</em>.</p>
+</blockquote>
+
+<p>and now your changes are saved. Enter the following to see your commit history : </p>
+
+<p><code>git log</code></p>
+
+<p>You can always check the state of your repository by entering : </p>
+
+<p><code>git status</code></p>
+
+<p>This will show you if some change is unsaved/uncommitted. Or if it is just added to staging area without being committed ( The thing we did by <code>git add</code> command ).</p>
+
+<h2>Storing your repository online</h2>
+
+<p>Now that we have a local repo, you might want to upload it online to something like Github or Gitlab. That is quite easy. All you would have to do is create a new empty repository on these platforms (can easily be done using GUI ). And that copy the address your that repo.</p>
+
+<p>Then comeback to the local repository and enter the command : </p>
+
+<p><code>git remote push [copied_address] master</code></p>
+
+<p>If it asks you your credentials, just enter it. and voila !! Your repository has an online copy. If you ever want that repo back on your local machine, just enter : </p>
+
+<p><code>git clone [address_of_online_repo]</code></p>
+
+<p>And you would get a local copy.</p>
+
+<blockquote>
+  <p>Till now whatever we have done is basically whatever is must knows for working with Git. Now we will learn some advance and cool stuff</p>
+</blockquote>
+
+<h2>Checking out a previous commit</h2>
+
+<p>lets say you wanted to see what you did sometimes back. You can always do that using git. Just copy the commit hashcode of your desired commit ( listed using  <code>git log</code> ). And then enter : </p>
+
+<p><code>git checkout [copied_hashcode]</code></p>
+
+<p>and you will be on the state when desired commit was made. You can go back to your most recent commit using the same procedure.</p>
+
+<h2>Working with branch</h2>
+
+<p>Lets say you want to make an experimental change in your code. But don't want to loose your current working state. Then you would have to use branches. </p>
+
+<blockquote>
+  <p>A new branch is basically a new pointer in your commit history. Using branch opens a lot of possibilities, like parallel experimentation.</p>
+</blockquote>
+
+<p>So enough talking, How to work on a branch ? Most probably you would be on <code>master</code> branch if you are following this guide. ( You can check that using <code>git status</code> ).</p>
+
+<p>So first we will create a new branch using</p>
+
+<p><code>git branch [name_u_want]</code></p>
+
+<p>Now to switch to your desired branch use</p>
+
+<p><code>git checkout -b [name_of_branch]</code></p>
+
+<p>and now just play around with your code, while a working copy is save somewhere.</p>
+
+<h2>Downloading some updates of a repository</h2>
+
+<p>Lets say someone makes some update to a repository that you already had locally. So instead of cloning the whole repo again just use :</p>
+
+<p><code>git pull [address_of_repo]</code></p>
+
+<h2>Some other useful git command</h2>
+
+<ul>
+<li><strong><code>git diff [obj_1] [obj_2]</code></strong> shows the difference tween the two objects, which maybe branches, commits, working trees etc</li>
+<li><strong><code>git show [commit_hash]</code></strong> shows what was changed in the given commit along with some metadata.</li>
+<li><strong><code>git merge [branch_name]</code></strong> merges the given branch into the current working branch</li>
+<li><strong><code>git config</code></strong> with some options is used to configure the local git environment.</li>
+</ul>
+
+<h2>Using GUI</h2>
+
+<p>All we have done till now can also be done using some GUI program like <strong>Github desktop</strong> or <strong>Gitkraken</strong>. But this is not recommended because we wont be able to learn stuff. This is being mentioned here just for the sake of completion.</p>
+
+<!-- text end -->
+]]></description><link>https://deprov447.github.io/a-simple-git-tutorial.html</link>
+<guid>https://deprov447.github.io/./a-simple-git-tutorial.html</guid>
+<dc:creator>Anubhav Choudhary</dc:creator>
+<pubDate>Fri, 24 Nov 2023 20:01:12 +0530</pubDate></item>
 <item><title>
 Code Comment - ary
 </title><description><![CDATA[
@@ -179,531 +741,5 @@ The consumer of the above function would probably never need to understand its i
 ]]></description><link>https://deprov447.github.io/code-comment---ary.html</link>
 <guid>https://deprov447.github.io/./code-comment---ary.html</guid>
 <dc:creator>Anubhav Choudhary</dc:creator>
-<pubDate>Wed, 14 Jun 2023 00:29:50 +0530</pubDate></item>
-<item><title>
-Front Space: Create your portfolio in seconds
-</title><description><![CDATA[
-
-<p>Front Space is a platform to quickly create single-page websites and host them on a custom subdomain for the world to see. </p>
-
-<h1>A Quick Back Story</h1>
-
-<p>I am always fascinated with beautiful web designs and portfolios. I randomly scroll through Product Hunt and r/web_design. And this app is basically a result of that only. For a long time, I had been thinking of making such an app, but couldn't find the motivation. But thanks to Hashnode and Linode, here we are.</p>
-
-<h1>Walkthrough</h1>
-
-<div style=" width:100px"><iframe src="https://frontspace.trainn.co/share/yzX4g9NRYP4oJDCPRFC5pQ/embed?autoplay=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; fullscreen" style="width:1000px; height: 500px"></iframe></div>
-
-<p><br/></p>
-
-<h1>Build with</h1>
-
-<p>Of course, love. But also a number of amazing technologies.</p>
-
-<h2>Front end</h2>
-
-<p>OK, so the front end is completely made with <strong>React.js</strong>. I've also used an awesome component library called <strong>Chakra UI</strong>. The front end is then deployed on <strong>Netlify</strong>, which also provided me with a fantastic CI/CD pipeline for deployment previews.And lastly, I've used <strong>Framer Motion</strong> to render some animations.</p>
-
-<h2>Back end</h2>
-
-<p>Next is the back end. The back end of our application is an <strong>Express app</strong>, running on top <strong>Node.js</strong>. I've used  <strong>Passport.js and jsonwebtoken both</strong> for handling authentication. (I'd love to blog about this if anyone's interested)</p>
-
-<h2>Deployment</h2>
-
-<p>Lastly, the deployment. So the back end is deployed on <strong>Linode</strong>, which provided an awesome $100 credit (recommended to check this out, the instances are as cheap as $5 a month). Next, I used Docker and <strong>Docker Compose</strong> for containerization and easy deployment of applications. And <strong>Nginx</strong> to reverse proxy the inbound traffic to docker instance.</p>
-
-<h2>Other</h2>
-
-<ul>
-<li><p><strong>Gitpod</strong>: an awesome cloud IDE</p></li>
-<li><p><strong>Github actions</strong></p></li>
-<li><p><strong>Cloudflare</strong>: DNS management</p></li>
-<li><p><strong>Hostinger</strong>: domain</p></li>
-</ul>
-
-<h1>Some Pages Made</h1>
-
-<p><img src="https://api.microlink.io?url=https%3A%2F%2Fhimniz.getfront.space&amp;overlay.browser=dark&amp;overlay.background=%2300000000&amp;screenshot=true&amp;meta=false&amp;embed=screenshot.url" alt="img3" title="" /></p>
-
-<p>!<a href="https://api.microlink.io?url=https%3A%2F%2Fdeprov447.getfront.space&amp;overlay.browser=dark&amp;overlay.background=%2300000000&amp;screenshot=true&amp;meta=false&amp;embed=screenshot.url align=" title="center">img2</a></p>
-
-<p>!<a href="https://api.microlink.io?url=https%3A%2F%2Fprinsu-pyaara.getfront.space&amp;overlay.browser=dark&amp;overlay.background=%2300000000&amp;screenshot=true&amp;meta=false&amp;embed=screenshot.url align=" title="center">img1</a></p>
-
-<h1>Links</h1>
-
-<p><strong>Website:</strong> <a href="https://getfront.space">https://getfront.space</a></p>
-
-<p><strong>Source code:</strong> <a href="https://github.com/deprov447/frontspace">https://github.com/deprov447/frontspace/</a></p>
-
-<h1>Contribute</h1>
-
-<p><img src="https://i.imgur.com/OwvD1q6.jpg" alt="It ain't much, but it's honest work." title="" /></p>
-
-<p>I know the app has a number of flaws, and I'm continuously working to make it a good product. But to achieve that, your help is needed. </p>
-
-<p>If you find any flaw in the app, please file an issue on <a href="https://github.com/deprov447/frontspace/issues/new/choose">Github</a>. Or feel free to <a href="mailto:deprov447+frontspace.protonmail.com">mail me</a>. </p>
-
-<p>And if you can, contribute &lt;3</p>
-
-<!-- text end -->
-]]></description><link>https://deprov447.github.io/front-space-create-your-portfolio-in-seconds.html</link>
-<guid>https://deprov447.github.io/./front-space-create-your-portfolio-in-seconds.html</guid>
-<dc:creator>Anubhav Choudhary</dc:creator>
-<pubDate>Wed, 14 Jun 2023 00:29:39 +0530</pubDate></item>
-<item><title>
-LFX Mentorship For Me
-</title><description><![CDATA[
-
-<p>Hi everyone, I recently completed my LFX Mentorship project. I was a mentee for the LFXM summer term of 2022 at Pixie, a CNCF sandbox project donated by The New Relic. </p>
-
-<p>In this blog, I will be sharing my experience of mentorship. 
-(TLDR; just awesome, one-of-a-kind experience &lt;3)</p>
-
-<p>If you're also applying for this (which every open-source newbie should), or have a doubt, feel free to <a href="https://linktr.ee/deprov447">drop me a message</a>. I'd be more than happy to help.</p>
-
-<h3>What is LFX Mentorship?</h3>
-
-<p>Let's start this by knowing about The Linux Foundation. The Linux Foundation (LF) is a non-profit organization, that standardizes the development of the Linux kernel and also promotes open source projects such as Kubernetes, GraphQL, Hyperledger, RISC-V, Xen project, etc.</p>
-
-<p>The Linux Foundation Mentorship is a program run by LF, which helps developers with the necessary skills and resources to learn and contribute to open source projects, through 3 or 6 months of internship. During this period, the mentee is guided through the development workflow and methodologies used by open source organizations, through a project.</p>
-
-<h3>Selection procedure</h3>
-
-<p>I've been involved in open source for some time and have been applying for the mentorship, but got rejected every time. </p>
-
-<p>This time also I was going through the projects and found a particularly interesting project. It was about parsing a protocol. This took my eye as at that time I was learning networking and experimenting a lot with communications. So naturally, I got interested. After reading the project details, I went to the project's slack channel to find a mentor. Omid, one of Pixie's founding engineers, was kind enough to reply to my message and asked for a quick call. </p>
-
-<p>I talked to him and told him about my interest and how I made a preliminary Mongo wire protocol parser using Node.js as preparation. He seemed satisfied with this and told me about further steps and time commitment.</p>
-
-<p>Other formalities included submitting a cover letter, and my resume. </p>
-
-<p>A few days later got this:
-!<a href="https://cdn.hashnode.com/res/hashnode/image/upload/v1654069377514/mINbQmBcw.png align=" title="center">Acceptance Email</a></p>
-
-<p>Finally, after applying so many times, got selected !!!</p>
-
-<h3>Month 1</h3>
-
-<p>Started, and was introduced to my mentor Yaxiong Zhao, another founding engineer at Pixie. He told me about what we were going to do in the next 3 months. He demoed me the Pixie UI and explained to me the working of it, and how pixie catches packets (hint: <a href="https://docs.px.dev/about-pixie/pixie-ebpf/#title">eBPF</a>). And then sent me the AMQP spec sheet, and how it needs to be implemented using C++. </p>
-
-<p>Yes, the protocol changed from Mongo to AMQP, and the language from Node.js to C++. But I guess a very important survival quality of industry is being flexible.</p>
-
-<p>So, in the first month, I got a theoretical knowledge about AMQP wire spec and experimented with it by deploying a local RabbitMQ server, and monitoring packets using Wireshark. My mentor also tried helping me build Pixie on my local machine, but we failed, even after switching distros. At last, we were able to set up my dev environment inside a container.</p>
-
-<p>...quite a month</p>
-
-<h3>Month 2</h3>
-
-<p>In the first half of this month, I continued my research on AMQP (apparently implementing a protocol required a lot of extensive reading) and found analogies of it with protocols I was already familiar with, and kept on manually experimenting with packet translation.</p>
-
-<p>3rd week of the month, It was finally time for me to start writing some code. Okay, so this was the difficult part. Having very limited knowledge of C++, continued forward. But my mentor was being an angel at this point, very patiently explaining to me, and pointing me in the right direction, making me understand every lex required. I started with implementing a data structure for storing and creating relations between packets. After some effort, finally got my PR merged.</p>
-
-<p>!<a href="https://cdn.hashnode.com/res/hashnode/image/upload/v1654167110197/HguzJlWmJ.png align=" title="center">Commit</a></p>
-
-<h3>Month 3</h3>
-
-<p>Continuing my code work, I started building a parser code. Yaxiong was very patient and helpful during this time, sending me blogs, and guides and explaining to me every little doubt I had. Thanks to him I was able to finally submit my preliminary code for parsing the code. </p>
-
-<p>And a final thing for this was to write tests. Learned google's C++ testing library. Wrote code, pushed.</p>
-
-<h3>Concluding the program</h3>
-
-<p>Like every good thing, this also came to an end. 12 weeks just fly by --- faster than you can think --- The program opened up a new world of open source and got me introduced to a lot of professional tools and etiquette. I appreciate the time and efforts my mentor put into this program.</p>
-
-<p>!<a href="https://cdn.hashnode.com/res/hashnode/image/upload/v1654569241516/YnOCZ9G6Z.jpeg align=" title="center">Email</a></p>
-
-<p>Completing this internship was a dream come true, dodging tonnes of problems: internet, college, placement preparation, exams, everything. At many points in the internship, I was very certain I won't be able to complete the project. but:</p>
-
-<blockquote>
-  <p>At some point, everything's gonna go south on you... everything's going to go south and you're going to say, this is it. This is how I end. Now you can either accept that, or you can get to work. That's all it is. You just begin. You do the math. You solve one problem... and you solve the next one... and then the next. And If you solve enough problems, you get to come home.</p>
-</blockquote>
-
-<p>-- Tail ender, The Martian.</p>
-
-<!-- text end -->
-]]></description><link>https://deprov447.github.io/lfx-mentorship-for-me.html</link>
-<guid>https://deprov447.github.io/./lfx-mentorship-for-me.html</guid>
-<dc:creator>Anubhav Choudhary</dc:creator>
-<pubDate>Wed, 14 Jun 2023 00:29:27 +0530</pubDate></item>
-<item><title>
-Kernel Based Virtualization
-</title><description><![CDATA[
-
-<p><strong>KVM (Kernel-based Virtual Machine)</strong> is an open source, full virtualization solution for x86 hardwares containing virtualization extensions. It is a hypervisor built into the Linux kernel and unlike regular VM players like Virtualbox and VMware which use emulation, KVM uses CPU extensions for hardware assisted virtualization via a kernel module (thats the secret for that blazing speed). 
-Each virtual machine has private virtualized hardware: a network card, disk, graphics adapter and all the peripherals. </p>
-
-<blockquote>
-  <p>This thing is, it's only for Linux.
-For Windows it is <a href="https://github.com/ddk50/winkvm">developing</a></p>
-</blockquote>
-
-<p>In this blog post, we will learn how to setup all the required components one by one, to finally be able to create a hardware accelerated VM.
-  ## KVM</p>
-
-<blockquote>
-  <p>KVM is a hardware based thing, and therefore has some hardware prerequisites. More straightly, to be able to run a kernel based virtual machine, your processor <strong>must</strong> have hardware virtualization compatibility (Nowadays most of them provide this)</p>
-
-<p>Hardware virtualization enables a CPU to act as if you have several independent computers, in order to enable several operating systems to run at the same time on the same machine. Fortunately, both AMD and Intel have dedicated extensions to provide the functionality. AMD has AMD-V and Intel has VT-x.</p>
-</blockquote>
-
-<p>1) To check whether your processor is compatible or not, run</p>
-
-<p><code>LC_ALL=C lscpu | grep Virtualization</code></p>
-
-<p>or</p>
-
-<p><code>grep -E --color=auto 'vmx|svm|0xc0f' /proc/cpuinfo</code></p>
-
-<p>If nothing appears, your best bet is that it maybe disabled by BIOS. So, head over to BIOS menu and enable <strong>Hardware virtualization</strong> (or something sounding similar. Every vendor has it's own set of nomenclature in these situations :/ ). </p>
-
-<p>After that, head to revert back to the starting of step 1.</p>
-
-<p>If still nothing happens, and if nothing <em>very wild</em> is going on, probably your device doesn't support this and you will not be able to use KVM.</p>
-
-<p>2) Now that you know your system is compatible from hardware side, it's time for software compatibility test. </p>
-
-<blockquote>
-  <p>KVM requires some kernel module (most probably you maybe having them already) : 
-   - <strong>kvm.ko</strong>, that provides the core virtualization infrastructure <br />
-   - A processor specific module, <strong>kvm-intel.ko</strong> or <strong>kvm-amd.ko</strong>.  </p>
-
-<p>The Userspace component of KVM is included in mainline QEMU, as of 1.3 and Kernel Component of KVM is in <a href="https://git.kernel.org/pub/scm/virt/kvm/kvm.git/tree/">mainline LINUX kernel</a>. And that's how you know this isn't some random mod/trick off the internet.</p>
-</blockquote>
-
-<p>To check if you have the required modules in your kernel, run the following command :</p>
-
-<p><code>zgrep CONFIG_KVM /proc/config.gz</code> </p>
-
-<p>Outputs should be either <code>y</code> or <code>m</code>.</p>
-
-<p>And then check if these modules are loaded or not</p>
-
-<p><code>lsmod | grep kvm</code></p>
-
-<p>If the modules are not loaded (i.e. if the command doesn't output anything), you have to <a href="https://wiki.archlinux.org/index.php/Kernel_module#Manual_module_handling">manually load them</a>.</p>
-
-<blockquote>
-  <p>If modprobing <em>kvm_intel</em> or <em>kvm_amd</em> fails but modprobing <em>kvm</em> succeeds, and <code>lscpu</code> claims that hardware acceleration is supported,  check the BIOS settings. Some vendors, especially laptop vendors, disable these processor extensions by default. To determine whether there is no hardware support or whether the extensions are disabled in BIOS, the output from <code>sudo dmesg --level=err,warn</code> after having failed to modprobe will tell.  </p>
-</blockquote>
-
-<p>And you're ready now.</p>
-
-<h2>virtio API</h2>
-
-<p>The next layer of abstraction is <strong>virtio API</strong>. To setup this, we have to go though some module tests, as we did in kvm's setup.</p>
-
-<p>Check if Virtio module is there in your kernel.</p>
-
-<p><code>zgrep VIRTIO /proc/config.gz</code> </p>
-
-<p>and then check if it is loaded (actually there are a list of modules to be checked, given below the command)</p>
-
-<p><code>lsmod | grep virtio</code></p>
-
-<p>Don't worry if they are not loaded, we will load them by ourselves :</p>
-
-<ul>
-<li>network device : <code>modprobe virtio-net</code></li>
-<li>block device : <code>modprobe virtio-blk</code></li>
-<li>controller device : <code>modprobe virtio-scsi</code></li>
-<li>serial device : <code>modprobe virtio-serial</code></li>
-<li><p>balloon device : <code>modprobe virtio-balloon</code></p>
-
-<blockquote>
-  <p>Doesn't matter if some modules are not loaded, or not found. (we may face problems later, but who cares for later? )</p>
-</blockquote></li>
-</ul>
-
-<h2>QEMU</h2>
-
-<p>Now that the CPU is being <em>emulated</em> (hmm?) by KVM, we need to emulate other devices, like USB peripherals, display, HDD etc. Here is when QEMU (Quick Emulator) comes in action.</p>
-
-<p>Install QEMU with your package manager. </p>
-
-<p><code>pacman -S qemu</code></p>
-
-<p>From this point you are ready to create virtual machines and run them. But this will include a lot of command line instructions, no GUI and bare minimum funtionality. So we will add some more wrappers.</p>
-
-<h2>libvirt</h2>
-
-<p>There are a <a href="https://www.linux-kvm.org/page/Management_Tools">lot of tools</a> available for KVM management. Go through them once and see if something catches your eye.</p>
-
-<p>I use libvirt for KVM management and thats what I can talk about :)</p>
-
-<p>So <a href="http://libvirt.org/">Libvirt</a> is collection of software that provides a convenient way to manage virtual machines and other virtualization functionality, such as storage and network interface management.libvirt is the wrapper which will control QEMU. So libvirt will control the KVM and QEMU both in short for us.</p>
-
-<p>Install libvirt.</p>
-
-<p><code>pacman -S libvirt</code></p>
-
-<p>Start libvirt daemon,</p>
-
-<p><code>systemctl start libvirtd.service</code></p>
-
-<blockquote>
-  <p>You may want to use your init system, but if it is systemd (which is the most popular one), above command will work.</p>
-</blockquote>
-
-<p>libvirt keeps it's files at <code>/var/lib/libvirt/</code>. And this is where would gigantic virtual drives will live too (probably as <code>qcow</code> files), so its worth knowing.</p>
-
-<p>Libvirt provides a CLI tool to control the VMs, called virsh. But we are going to install a GUI tool too.</p>
-
-<h2>virt-manager</h2>
-
-<p>So, <a href="https://virt-manager.org/">virt-manager</a> is our last layer of abstraction. This gives us the required GUI to talk to the VMs. Now instead of typing commands, you can click buttons.</p>
-
-<p><code>pacman -S virt-manager</code></p>
-
-<p>there are also some extra tools which you may require:</p>
-
-<p><code>pacman -S virt-install virt-viewer</code></p>
-
-<h2>(cherry on the top)</h2>
-
-<p>Install these </p>
-
-<p><code>pacman -S ebtables dnsmasq iptables bridge-utils openbsd-netcat</code></p>
-
-<ul>
-<li><strong>ebtables</strong> is used  for setting NAT</li>
-<li><strong>dhclient</strong> provides dhcp resolution (You most probably have this one installed)</li>
-<li><strong>dnsmasq</strong> is used to provide IP addresses to VMs</li>
-<li><strong>bridge-utils</strong> is used to create bridge iterfaces</li>
-<li><strong>openbsd-netcat</strong> provides functionality to SSH into our VM</li>
-</ul>
-
-<p>Now you are all set up to fire a VM and play that 4k video, without frying your system. Wait no, not really. Although you can now start VMs, there is a lot of <strong>configuration</strong> that needs to be done to achieve that bare-metal performance, but thats a topic for another day.</p>
-
-<p>See this : https://www.linux-kvm.org/page/HOWTO</p>
-
-<!-- text end -->
-]]></description><link>https://deprov447.github.io/kernel-based-virtualization.html</link>
-<guid>https://deprov447.github.io/./kernel-based-virtualization.html</guid>
-<dc:creator>Anubhav Choudhary</dc:creator>
-<pubDate>Wed, 14 Jun 2023 00:29:14 +0530</pubDate></item>
-<item><title>
-Season of KDE 2021 Final Update
-</title><description><![CDATA[
-
-<!-- inclde pics -->
-
-<p>Hello again everyone,
-I wrote my last update related to Season of KDE in January, and now is the time for the final update. I am sorry I couldn't write blogs in between. The 3 months passed by like at supersonic speed.</p>
-
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1633831669757/YYuc8uJV4.png" alt="Calamares Logo" title="" /></p>
-
-<p>So I was selected to work on <a href="github.com/calamares/calamares">Calamares project</a> under Adriaan de Groot. Most of my work revolved around the functionality of sending the installation logs to paste server online. This feature would help distro maintainers, calamares developers as well as the end users to pin point the errors that possibly may have caused installation to stop (if that happens).</p>
-
-<p>First of all there was some basic (but important) <a href="https://github.com/calamares/calamares/pull/1186">code</a> work by <a href="https://github.com/bill-auger">Bill Auger</a>. My duty was to convert this work into a functionality, so that it is customizable and a distro maintainer can use the functionality without having to go through all the codebase. Currently a maintainer can easily setup the paste feature after tweaking a <a href="https://github.com/calamares/calamares/blob/2a9205ebd972999dbb3b91dda513dc67742346ad/src/branding/default/branding.desc#L222">configuration file</a>. The customizations offered are : the type of server to paste the data, the specific server (url) to paste the data and the maximum size of data to be send to that server (last one is under <a href="https://github.com/calamares/calamares/pull/1666">review</a>).</p>
-
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1633831672114/OrQta2T_8.json" alt="Current paste feature" title="" /></p>
-
-<p>Then some of the smaller works included hiding the next/prev buttons when calamares is actually installing and adding an option to skip the bootloader installation for EFI system.</p>
-
-<h3>Conclusion</h3>
-
-<p>All and all Season of KDE has been a wonderful experience for me. The programme taught me how to write some good, real-world code and how to collaborate with others. Calamares IRC channel was super helpful to me, people are really nice and know their stuff. A special thank to  Adriaan, who used to teach me some seemingly complicated things in the easiest words. Although I never really understood why he randomly writes <code>:momo</code> in the channel xD.</p>
-
-<!-- text end -->
-]]></description><link>https://deprov447.github.io/season-of-kde-2021-final-update.html</link>
-<guid>https://deprov447.github.io/./season-of-kde-2021-final-update.html</guid>
-<dc:creator>Anubhav Choudhary</dc:creator>
-<pubDate>Wed, 14 Jun 2023 00:28:40 +0530</pubDate></item>
-<item><title>
-Season of KDE Selection
-</title><description><![CDATA[
-
-<p>Hey people from around the world !!</p>
-
-<p>I am Anubhav Choudhary, an engineering student from India. I recently got selected in <a href="https://season.kde.org">Season of KDE 2021</a> to work under <a href="https://calamares.io">Calamares</a> project. My work is to resolve numerous issues and complete some tasks mentioned on <a href="https://github.com/calamares/calamares/labels/hacktoberfest">Calamares' Issue page</a>.  And I am just too excited about that. Why? Because I have been contributing to open source (to KDE? yes) for sometime now. But It always felt very unordered and random contributions (which I was not happy about). But now that I'm in SoK and things are preplanned, hopefully these next 3 months will be smooth and calm.</p>
-
-<p>A big thank to <strong>Carl Schwan</strong> and <strong>Adriaan de Groot</strong>  for help and mentorship.</p>
-
-<p>I would be writing some more blogs as I proceed forward to contribute in Calamares. I would love to hear from you readers (feedback, suggestions, comments anything).</p>
-
-<p><em>IRC: @deprov447:kde.org
- Telegram: t.me/deprov447</em></p>
-
-<p>Thanks for reading and long live open source :)</p>
-
-<!-- text end -->
-]]></description><link>https://deprov447.github.io/season-of-kde-selection.html</link>
-<guid>https://deprov447.github.io/./season-of-kde-selection.html</guid>
-<dc:creator>Anubhav Choudhary</dc:creator>
-<pubDate>Wed, 14 Jun 2023 00:28:32 +0530</pubDate></item>
-<item><title>
-A Simple Git Tutorial
-</title><description><![CDATA[
-
-<p>So new to Git and Github ? And wondering what is it ? Today we are gonna talk about these things. We will start off with Git. And once you understand git, everything related is quite easy; be it GitHub, Bitbucket, GitLab etc.</p>
-
-<h2>So What Is Git ?</h2>
-
-<p>Git is a merely a development tool, which has nothing to do with your application itself, but adds to the productivity and manageability of code.</p>
-
-<p>More formally speaking, Git is a <strong>Version Control Tool</strong>. i.e. it helps in maintaining different versions and releases of the software.</p>
-
-<h2>Installation</h2>
-
-<p>Type out 'Download Git' on Google and download it directly from the official website. Just install it like any other software. And voila! its good to go</p>
-
-<blockquote>
-  <p>Powershell, command prompt, bash, terminal, shell... everything is same for us for now. We are gonna use them interchangeably. You can open anyone and you're good to go.</p>
-</blockquote>
-
-<h2>Initialising a directory/folder with Git</h2>
-
-<p>Firstly we have to tell the system that some folder is a git repository (Repository is basically like a folder). This can be done by opening a shell in the folder to be initialized. Then enter the command</p>
-
-<p><code>git init</code></p>
-
-<p>This will create an empty git repository for you. Going forward..</p>
-
-<h2>Saving the state of repository</h2>
-
-<p>Lets say you made some changes to your code and want to save the state of the directory at that moment, so that in future you can revert back to that state, if needed. So you would have to do these two things:</p>
-
-<p><code>git add [name_of_file]</code></p>
-
-<p><code>git commit -m ["some_meaningful_message"]</code></p>
-
-<blockquote>
-  <p>Replace [content] with the corresponding content throughout this article. For ex: <em>git add index.html</em>.</p>
-</blockquote>
-
-<p>and now your changes are saved. Enter the following to see your commit history : </p>
-
-<p><code>git log</code></p>
-
-<p>You can always check the state of your repository by entering : </p>
-
-<p><code>git status</code></p>
-
-<p>This will show you if some change is unsaved/uncommitted. Or if it is just added to staging area without being committed ( The thing we did by <code>git add</code> command ).</p>
-
-<h2>Storing your repository online</h2>
-
-<p>Now that we have a local repo, you might want to upload it online to something like Github or Gitlab. That is quite easy. All you would have to do is create a new empty repository on these platforms (can easily be done using GUI ). And that copy the address your that repo.</p>
-
-<p>Then comeback to the local repository and enter the command : </p>
-
-<p><code>git remote push [copied_address] master</code></p>
-
-<p>If it asks you your credentials, just enter it. and voila !! Your repository has an online copy. If you ever want that repo back on your local machine, just enter : </p>
-
-<p><code>git clone [address_of_online_repo]</code></p>
-
-<p>And you would get a local copy.</p>
-
-<blockquote>
-  <p>Till now whatever we have done is basically whatever is must knows for working with Git. Now we will learn some advance and cool stuff</p>
-</blockquote>
-
-<h2>Checking out a previous commit</h2>
-
-<p>lets say you wanted to see what you did sometimes back. You can always do that using git. Just copy the commit hashcode of your desired commit ( listed using  <code>git log</code> ). And then enter : </p>
-
-<p><code>git checkout [copied_hashcode]</code></p>
-
-<p>and you will be on the state when desired commit was made. You can go back to your most recent commit using the same procedure.</p>
-
-<h2>Working with branch</h2>
-
-<p>Lets say you want to make an experimental change in your code. But don't want to loose your current working state. Then you would have to use branches. </p>
-
-<blockquote>
-  <p>A new branch is basically a new pointer in your commit history. Using branch opens a lot of possibilities, like parallel experimentation.</p>
-</blockquote>
-
-<p>So enough talking, How to work on a branch ? Most probably you would be on <code>master</code> branch if you are following this guide. ( You can check that using <code>git status</code> ).</p>
-
-<p>So first we will create a new branch using</p>
-
-<p><code>git branch [name_u_want]</code></p>
-
-<p>Now to switch to your desired branch use</p>
-
-<p><code>git checkout -b [name_of_branch]</code></p>
-
-<p>and now just play around with your code, while a working copy is save somewhere.</p>
-
-<h2>Downloading some updates of a repository</h2>
-
-<p>Lets say someone makes some update to a repository that you already had locally. So instead of cloning the whole repo again just use :</p>
-
-<p><code>git pull [address_of_repo]</code></p>
-
-<h2>Some other useful git command</h2>
-
-<ul>
-<li><strong><code>git diff [obj_1] [obj_2]</code></strong> shows the difference tween the two objects, which maybe branches, commits, working trees etc</li>
-<li><strong><code>git show [commit_hash]</code></strong> shows what was changed in the given commit along with some metadata.</li>
-<li><strong><code>git merge [branch_name]</code></strong> merges the given branch into the current working branch</li>
-<li><strong><code>git config</code></strong> with some options is used to configure the local git environment.</li>
-</ul>
-
-<h2>Using GUI</h2>
-
-<p>All we have done till now can also be done using some GUI program like <strong>Github desktop</strong> or <strong>Gitkraken</strong>. But this is not recommended because we wont be able to learn stuff. This is being mentioned here just for the sake of completion.</p>
-
-<!-- text end -->
-]]></description><link>https://deprov447.github.io/a-simple-git-tutorial.html</link>
-<guid>https://deprov447.github.io/./a-simple-git-tutorial.html</guid>
-<dc:creator>Anubhav Choudhary</dc:creator>
-<pubDate>Wed, 14 Jun 2023 00:28:15 +0530</pubDate></item>
-<item><title>
-Linux Experience After 10 Months
-</title><description><![CDATA[
-
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1633831682068/Ul3fMJoUY.jpeg" alt="image" title="" /></p>
-
-<p>Its been around 10 months of me using Linux as my primary OS. I bought my laptop on Jan 1st, 2020 (yes :D) and today its Oct 5th (technically been 9 months, but okay). So let me share my experience regarding the same.</p>
-
-<h3>Starting / Booting Up</h3>
-
-<p>So immediately after getting my laptop, I downloaded an Ubuntu 18.04 LTS ISO image and flashed it on a pen drive. Then booted the laptop using that. The best thing was that I can just try out the new OS without having to install it on HDD. After an hour or so of playing, finally installed Ubuntu. The toughest part till now was installing GRUB and its configuration but everything else was quite easy, just had to follow an online guide. (I always tend to follow some documentation or guide while working with a new piece of code)</p>
-
-<h3>Familiarization</h3>
-
-<p>Then was the time to walk around. I tried out some applications, changed settings and gone through the file system. I tried out some beginner commands too on CLI, just to get a feel. At this time typing something on CLI felt like wastage of keystrokes, as the same task can be done using GUI. So I gave weightage to mouse over keyboard (but wasn’t long until the unleash of beast). Another thing I felt was, why would someone try and install some software using CLI, instead of downloading its setup? (realized later, its much easier than having to download 10 missing DLLs to run FIFA). So speaking boldly, This is the time when Linux feels like an extra effort for simple stuff. But believe me, this feeling will recede from view in a week (as it did).</p>
-
-<h3>The Learning Phase</h3>
-
-<p>Now that I was comfortable with simple task, It was the time to learn some stuff. Linux has a universe of tutorials and guides. So I just started reading stuff. In a month or two of reading ,learning, and experimenting, I was familiar with:</p>
-
-<ul>
-<li>File system structure</li>
-<li>Most of the basic commands</li>
-<li>Kernel, Bootloader, BIOS</li>
-<li>Desktop Environment</li>
-<li>Various flavors and distributions</li>
-<li>Package Managers</li>
-</ul>
-
-<p>And some other stuff (which I can’t recall). By this time I abandoned the Ubuntu GNOME, and after trying a lot of things like Kubuntu, Xubuntu, Kali Linux, Parrot, Mint etc, I decided to settle with Kubuntu 20.04 LTS for the time being (mostly because of its balance of features and UI).
-Image for post
-Image for post
-My Current Linux Desktop</p>
-
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1633831684141/jPNMqwMkS.jpeg" alt="" title="" /></p>
-
-<h3>Diving Deeper</h3>
-
-<p>Now was the time to dig deeper. I started playing with config files and core system related stuff (daredevil xD). Broke much stuff, reinstalled the OS quite a number of time, but learning. By now, I was able to understand most of the things I was seeing and doing. This is somewhat satisfying. And to be honest, I think there is no end to this phase, just high scores.</p>
-
-<h3>Giving Back What Is Taken</h3>
-
-<p>This sections’ heading seems misleading, but the gist is Now that you understand Linux, let Linux understand you. That is to start contributing. Most of the Linux is open sourced and is maintained by ‘code charity’. So started contributing to various Linux applications. This way i am being a part of the enormous open source community as well as paying for my free OS (didn’t I told you? almost everything here is free, sorry Windows).</p>
-
-<h3>Final Thoughts</h3>
-
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1633831685996/QRo9ZYQtb.png" alt="" title="" /></p>
-
-<p>So that I have used Linux for sometime, I think I can form an opinion now. Although Linux may seem very intimidating and have quite a learning curve, but believe me there is much more stuff one can do with Linux than with Windows / Mac. You can literally control each and every aspect of your system. And most of all you’re learning a computers’ core 101.</p>
-
-<!-- text end -->
-]]></description><link>https://deprov447.github.io/linux-experience-after-10-months.html</link>
-<guid>https://deprov447.github.io/./linux-experience-after-10-months.html</guid>
-<dc:creator>Anubhav Choudhary</dc:creator>
-<pubDate>Wed, 14 Jun 2023 00:27:50 +0530</pubDate></item>
+<pubDate>Fri, 24 Nov 2023 20:01:12 +0530</pubDate></item>
 </channel></rss>
