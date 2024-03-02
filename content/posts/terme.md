@@ -1,5 +1,6 @@
 ---
-title: creating a POC terminal emulator  
+title: Creating a POC terminal emulator  
+date: 2023-12-03T22:07:22+05:30
 ---
  
 # what is a terminal emulator?  

@@ -1,5 +1,6 @@
 ---
 title: Code Comment - ary
+date: 2023-06-14T00:18:47+05:30
 ---
 
 > Programs must be written for people to read, and only incidentally for machines to execute.

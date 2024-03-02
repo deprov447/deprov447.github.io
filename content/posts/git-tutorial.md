@@ -1,5 +1,6 @@
 ---
 title: A Simple Git Tutorial
+date: 2020-10-08T19:36:13+05:30
 ---
 
 So new to Git and Github ? And wondering what is it ? Today we are gonna talk about these things. We will start off with Git. And once you understand git, everything related is quite easy; be it GitHub, Bitbucket, GitLab etc.

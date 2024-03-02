@@ -1,5 +1,6 @@
 ---
 title: Kernel Based Virtualization
+date: 2021-04-16T16:22:30+05:30
 ---
 
 **KVM (Kernel-based Virtual Machine)** is an open source, full virtualization solution for x86 hardwares containing virtualization extensions. It is a hypervisor built into the Linux kernel and unlike regular VM players like Virtualbox and VMware which use emulation, KVM uses CPU extensions for hardware assisted virtualization via a kernel module (thats the secret for that blazing speed). 
