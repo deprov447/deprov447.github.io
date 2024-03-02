@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Code Comment - ary - deprov447</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Programs must be written for people to read, and only incidentally for machines to execute. &mdash; Structure and Interpretation of Computer Programs
+Code comments are one of the things which are as conflicted as one&rsquo;s belief of best programming language. Some believe in no comment at all, some in extensive commenting, some in &ldquo;block commenting&rdquo;, and others in &ldquo;line commenting&rdquo;. What is right really depends on the situation and the needs." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Code Comment - ary" />
+<meta property="og:description" content="Programs must be written for people to read, and only incidentally for machines to execute. &mdash; Structure and Interpretation of Computer Programs
+Code comments are one of the things which are as conflicted as one&rsquo;s belief of best programming language. Some believe in no comment at all, some in extensive commenting, some in &ldquo;block commenting&rdquo;, and others in &ldquo;line commenting&rdquo;. What is right really depends on the situation and the needs." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/code-commentary/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-06-14T00:18:47+05:30" />
+<meta property="article:modified_time" content="2023-06-14T00:18:47+05:30" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Code Comment - ary"/>
+<meta name="twitter:description" content="Programs must be written for people to read, and only incidentally for machines to execute. &mdash; Structure and Interpretation of Computer Programs
+Code comments are one of the things which are as conflicted as one&rsquo;s belief of best programming language. Some believe in no comment at all, some in extensive commenting, some in &ldquo;block commenting&rdquo;, and others in &ldquo;line commenting&rdquo;. What is right really depends on the situation and the needs."/>
+<script src="/js/feather.min.js"></script>
+	
+	
+        <link href="/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="/css/dark.726cd11ca6eb7c4f7d48eb420354f814e5c1b94281aaf8fd0511c1319f7f78a4.css"  disabled />
+	
+
+	
+	
+
+	
+	
+	
+	
+		
+		
+		<link rel="stylesheet" type="text/css" href="/css/text.d9fe239b15597e89f0f16dd71c7484e059d691e4717aae91d6393cf0c4e6542a.css">
+		
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="/">deprov447</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		| <span id="dark-mode-toggle" onclick="toggleTheme()"></span>
+		<script src="/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Code Comment - ary</h1>
+			<div class="meta">Posted on Jun 14, 2023</div>
+		</div>
+		
+
+		<section class="body">
+			<blockquote>
+<p>Programs must be written for people to read, and only incidentally for machines to execute.
+&mdash; <a href="https://web.mit.edu/alexmv/6.037/sicp.pdf">Structure and Interpretation of Computer Programs</a></p>
+</blockquote>
+<p>Code comments are one of the things which are as conflicted as one&rsquo;s belief of <strong>best programming language</strong>.  Some believe in no comment at all, some in extensive commenting, some in &ldquo;block commenting&rdquo;, and others in &ldquo;line commenting&rdquo;. What is right really depends on the situation and the needs. But choosing a good commenting strategy and knowledge of common best practices not only makes your life easy but also the lives of anyone looking at your source code.</p>
+<p><img src="https://i.redd.it/iuy9fxt300811.png" alt="code comments be like"></p>
+<p>There are tonnes of tools like analyzers, compilers, linters, IDEs and what not to take care of your code. But none of them could take care of your comments. Your compiler doesn&rsquo;t check your comments so there is no way to determine that comments are correct. And that is why you have to care about them.</p>
+<p>And this article is all about that. It has some good insights on coding comments. which can help you write nicer comments in your next project.</p>
+<h2 id="what-not-to-comment">What not to comment?</h2>
+<p>First of all, (and it goes without saying) your code itself should be as readable and as simple as possible. You should strive to make your code as clear as possible without relying on comments as a crutch. Only at the point where the code <em>cannot</em> be made easier to understand should you begin to add comments.</p>
+<p>Code can only tell you <em>how</em> the program works; comments can tell you <em>why</em> it works. Try not to shortchange your fellow developers in either area.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">foo</span>(<span style="color:#66d9ef">int</span> n) {						<span style="color:#75715e">// function foo denotes depth first search and takes an integer argument n, denoting the index of parent.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	arr[n] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;							<span style="color:#75715e">// arr stores the nodes already visited
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; i<span style="color:#f92672">&lt;</span>T[n].size(); <span style="color:#f92672">++</span>i)	<span style="color:#75715e">// i denotes the index of child nodes. T denotes tree stored as adjacency list.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>arr[T[n][i]])				
+</span></span><span style="display:flex;"><span>			foo(T[n][i]);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">dfs</span>(<span style="color:#66d9ef">int</span> parent) {
+</span></span><span style="display:flex;"><span>	isVisited[parent] <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span> child: TreeAL[parent])
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>isVisited[child])
+</span></span><span style="display:flex;"><span>			dfs(child);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>See, which code was easier to understand? Even though the first one has more comments but second&rsquo;s more readable. Adding comments doesn&rsquo;t always give a positive effect. Hence it should not be used as a substitute for quality code.</p>
+<blockquote>
+<p>“Any fool can write code that a computers can understand. Good programmers write code that humans can understand.” — Martin Fowler</p>
+</blockquote>
+<h2 id="what-to-comment">What to comment?</h2>
+<p>Next is what to comment? What to comments is a thing with some extremely opposing viewpoints (and surprisingly everyone is right). All of the best programmers and project maintainers have different rules of what needs commenting and how should that be commented.</p>
+<p>So it’s always a good idea to look into the contribution guidelines/previous work if you are contributing to an open-source project.</p>
+<p><img src="https://i.redd.it/7dzo1rbokj871.jpg" alt=""></p>
+<p>Here are some of the things people generally comment:</p>
+<h3 id="the-plan">The Plan</h3>
+<p>Many developers try to outline their idea with comments before actually coding it. This gives the benefit of not having to remember the whole, already ideated workflow every time.</p>
+<h3 id="description">Description</h3>
+<p>This might be the most common thing comments are used for. It involves explaining the connected code in plain English (and that means senior devs may find it annoying).</p>
+<p>It is a good habit to keep explaining your code keeping your target audience in mind. You may not need to explain working of a simple POST endpoint in a professional environment.</p>
+<p>But again, remember, code comments are not a remedy for writing bad code. You should spend a good amount of time simplifying the code, rather than commenting. A classic example: <a href="https://web.archive.org/web/20070220094221/http://cm.bell-labs.com/cm/cs/who/dmr/odd.html">You are not expected to understand this</a></p>
+<h3 id="resources">Resources</h3>
+<p>Links to standards and other documentation can help readers understand the problem your code is solving. While this information may be somewhere in a design document, a well-placed comment gives readers the pointer when and where it is most needed. Also, it’s a good habit to always give a link to the forum from where you copied a snippet ,as It allows future maintainers to make any positive changes/optimization if they come up later on. Pasting in the URL is much quicker than later finding the reference.</p>
+<h3 id="metadata">Metadata</h3>
+<p>Developer sometimes use comments to store metadata about the file, like:</p>
+<ul>
+<li>The creator of the original version of the program file</li>
+<li>Date when the first version was created</li>
+<li>Current maintainer of the program</li>
+<li>Who has edited the program file so far</li>
+<li>URL of documentation about how to use the program</li>
+<li>License</li>
+</ul>
+<h3 id="auto-documentation-syntax">Auto Documentation Syntax</h3>
+<p>A lot of cool documentation generators use the comments in the source code to automatically generate documentation for the program. Examples are Javadoc for Java, Doxygen for C, C++, etc. Forms of docstring are supported by Python, Lisp, Elixir, and Clojure.</p>
+<p>C#, F#, and Visual Basic .NET implement a similar feature called &ldquo;XML Comments&rdquo; which are read by IntelliSense from the compiled .NET assembly.</p>
+<h2 id="where-to-comments">Where to comments?</h2>
+<p><img src="https://lh5.googleusercontent.com/rn1S8do8n_2FHFcM7wO7vZfHyZ2DUWP3ov33r30tjdxIuZiJFGKl80FHwaoYP1K4JygCDDTxs81Y7FrwUe_iD-K5yHVY14p-0mB9TfOsOoMV5RfnrItrO0wyVKEp-Dn0B-99jlI3" alt="https://geekandpoke.typepad.com/geekandpoke/2011/06/code-commenting-made-easy.html"></p>
+<h4 id="the-top-of-a-program-file">The top of a program file</h4>
+<p>It is called the <strong>Header comment</strong>. It is generally used to store metadata about the file, like who wrote it, who amended it, what the code does, IDE metadata, license, etc.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">/* === This file is part of Calamares - &lt;https://calamares.io&gt; ===
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *   SPDX-FileCopyrightText: 2014-2015 Teo Mrnjavac &lt;teo@kde.org&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *   SPDX-FileCopyrightText: 2019 Gabriel Craciunescu &lt;crazy@frugalware.org&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *   SPDX-FileCopyrightText: 2019 Dominic Hayes &lt;ferenosdev@outlook.com&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *   SPDX-FileCopyrightText: 2017-2018 Adriaan de Groot &lt;groot@kde.org&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *   SPDX-License-Identifier: GPL-3.0-or-later
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *   Calamares is Free Software: see the License-Identifier above.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span></code></pre></div><p>The above snippet is from a file, <strong>Settings.cpp</strong> from a project called <a href="https://raw.githubusercontent.com/calamares/calamares/calamares/src/libcalamares/Settings.cpp">Calamares</a>. It shows how production level, rich code samples are using header comments.</p>
+<h4 id="above-functionsmethods">Above functions/methods</h4>
+<p>The basic idea of a function is an abstraction. I think a function is a black box that takes some input and produces some output. What is being done in the function can be skipped (sometimes) if one knows what the end result would be.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">/* 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Takes an object as an argument, with valid username and password string fields;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Returns a 48 characters long auth token, valid for the next 24 hours.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">login</span> <span style="color:#f92672">=</span> ({<span style="color:#a6e22e">username</span>, <span style="color:#a6e22e">password</span>}) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// ...Some complex login mechanism.... 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">token</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>The consumer of the above function would probably never need to understand its internal working as long as it has a high-level idea of what the function needs and what it returns.</p>
+<p>And that is why the description of a function is one place comments find great use.</p>
+<h4 id="in-line">In line</h4>
+<p>Any &ldquo;tricky&rdquo; code where it is not immediately obvious what you are trying to accomplish, should have comments right above it or on the same line with it. Like this one:</p>
+<p><img src="https://preview.redd.it/93amr9iz28yx.png?width=960&amp;crop=smart&amp;auto=webp&amp;s=db81f6dfde24725374261be93cd8115869909530" alt="Inline comment examples"></p>
+<h2 id="tags">Tags</h2>
+<p>Adding tags to your comments is also a nice thing. This allows programmers to easily find those parts of the program (probably using <code>grep</code> command).</p>
+<ul>
+<li><strong>BUG</strong> – a known bug that should be corrected.</li>
+<li><strong>FIXME</strong> – should be corrected.</li>
+<li><strong>HACK</strong> – a workaround.</li>
+<li><strong>TODO</strong> – something to be done.</li>
+<li><strong>NOTE</strong> – used to highlight especially notable gotchas.</li>
+<li><strong>UNDONE</strong> – a reversal or &ldquo;rollback&rdquo; of previous code.</li>
+<li><strong>XXX</strong> – warn other programmers of problematic or misguiding code</li>
+</ul>
+<p>These are just some examples. Most of the serious projects do mention tags somewhere in their contribution wiki.</p>
+<h2 id="final-say">Final say</h2>
+<blockquote>
+<p>Understand what may need comments. Your personal portfolio site probably would not need an extensive commenting strategy, but the javascript library you created would definitely need one.</p>
+</blockquote>
+<p>Commenting thumb rules one can follow while coding can be:</p>
+<ul>
+<li>Write the name of the program and its author</li>
+<li>What the program intends the code to do</li>
+<li>Whether the programmer thinks the code could be better written</li>
+<li>Where the program may be incomplete or need updating</li>
+</ul>
+<p>I am not an expert in any way (far from that) but I do understand the importance of good comments. And everyone should.</p>
+<p>Hope this article helped you understand the <em>reasons</em> why commenting is a necessary skill in computer science. Cheers :)</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/deprov447" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2024  © deprov447 |  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>
