@@ -1,4 +1,4 @@
-baseURL = "deprov447.github.io"
+baseURL = "/"
 languageCode = "en-us"
 title = "deprov447"
 publishDir = "docs"
