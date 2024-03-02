@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html><head lang="en"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title> - deprov447</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="A Simple Git Tutorial
+So new to Git and Github ? And wondering what is it ? Today we are gonna talk about these things. We will start off with Git. And once you understand git, everything related is quite easy; be it GitHub, Bitbucket, GitLab etc.
+So What Is Git ? Git is a merely a development tool, which has nothing to do with your application itself, but adds to the productivity and manageability of code." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="" />
+<meta property="og:description" content="A Simple Git Tutorial
+So new to Git and Github ? And wondering what is it ? Today we are gonna talk about these things. We will start off with Git. And once you understand git, everything related is quite easy; be it GitHub, Bitbucket, GitLab etc.
+So What Is Git ? Git is a merely a development tool, which has nothing to do with your application itself, but adds to the productivity and manageability of code." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//localhost:1313/git-tutorial/" /><meta property="article:section" content="" />
+
+
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="A Simple Git Tutorial
+So new to Git and Github ? And wondering what is it ? Today we are gonna talk about these things. We will start off with Git. And once you understand git, everything related is quite easy; be it GitHub, Bitbucket, GitLab etc.
+So What Is Git ? Git is a merely a development tool, which has nothing to do with your application itself, but adds to the productivity and manageability of code."/>
+<script src="//localhost:1313/js/feather.min.js"></script>
+	
+	
+        <link href="//localhost:1313/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="//localhost:1313/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="//localhost:1313/css/dark.726cd11ca6eb7c4f7d48eb420354f814e5c1b94281aaf8fd0511c1319f7f78a4.css" media="(prefers-color-scheme: dark)"  />
+	
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="//localhost:1313/">deprov447</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title"></h1>
+			<div class="meta">Posted on Jan 1, 0001</div>
+		</div>
+		
+
+		<section class="body">
+			<p>A Simple Git Tutorial</p>
+<p>So new to Git and Github ? And wondering what is it ? Today we are gonna talk about these things. We will start off with Git. And once you understand git, everything related is quite easy; be it GitHub, Bitbucket, GitLab etc.</p>
+<h2 id="so-what-is-git-">So What Is Git ?</h2>
+<p>Git is a merely a development tool, which has nothing to do with your application itself, but adds to the productivity and manageability of code.</p>
+<p>More formally speaking, Git is a <strong>Version Control Tool</strong>. i.e. it helps in maintaining different versions and releases of the software.</p>
+<h2 id="installation">Installation</h2>
+<p>Type out &lsquo;Download Git&rsquo; on Google and download it directly from the official website. Just install it like any other software. And voila! its good to go</p>
+<blockquote>
+<p>Powershell, command prompt, bash, terminal, shell&hellip; everything is same for us for now. We are gonna use them interchangeably. You can open anyone and you&rsquo;re good to go.</p>
+</blockquote>
+<h2 id="initialising-a-directoryfolder-with-git">Initialising a directory/folder with Git</h2>
+<p>Firstly we have to tell the system that some folder is a git repository (Repository is basically like a folder). This can be done by opening a shell in the folder to be initialized. Then enter the command</p>
+<p><code>git init</code></p>
+<p>This will create an empty git repository for you. Going forward..</p>
+<h2 id="saving-the-state-of-repository">Saving the state of repository</h2>
+<p>Lets say you made some changes to your code and want to save the state of the directory at that moment, so that in future you can revert back to that state, if needed. So you would have to do these two things:</p>
+<p><code>git add [name_of_file]</code></p>
+<p><code>git commit -m [&quot;some_meaningful_message&quot;]</code></p>
+<blockquote>
+<p>Replace [content] with the corresponding content throughout this article. For ex: <em>git add index.html</em>.</p>
+</blockquote>
+<p>and now your changes are saved. Enter the following to see your commit history :</p>
+<p><code>git log</code></p>
+<p>You can always check the state of your repository by entering :</p>
+<p><code>git status</code></p>
+<p>This will show you if some change is unsaved/uncommitted. Or if it is just added to staging area without being committed ( The thing we did by <code>git add</code> command ).</p>
+<h2 id="storing-your-repository-online">Storing your repository online</h2>
+<p>Now that we have a local repo, you might want to upload it online to something like Github or Gitlab. That is quite easy. All you would have to do is create a new empty repository on these platforms (can easily be done using GUI ). And that copy the address your that repo.</p>
+<p>Then comeback to the local repository and enter the command :</p>
+<p><code>git remote push [copied_address] master</code></p>
+<p>If it asks you your credentials, just enter it. and voila !! Your repository has an online copy. If you ever want that repo back on your local machine, just enter :</p>
+<p><code>git clone [address_of_online_repo]</code></p>
+<p>And you would get a local copy.</p>
+<blockquote>
+<p>Till now whatever we have done is basically whatever is must knows for working with Git. Now we will learn some advance and cool stuff</p>
+</blockquote>
+<h2 id="checking-out-a-previous-commit">Checking out a previous commit</h2>
+<p>lets say you wanted to see what you did sometimes back. You can always do that using git. Just copy the commit hashcode of your desired commit ( listed using  <code>git log</code> ). And then enter :</p>
+<p><code>git checkout [copied_hashcode]</code></p>
+<p>and you will be on the state when desired commit was made. You can go back to your most recent commit using the same procedure.</p>
+<h2 id="working-with-branch">Working with branch</h2>
+<p>Lets say you want to make an experimental change in your code. But don&rsquo;t want to loose your current working state. Then you would have to use branches.</p>
+<blockquote>
+<p>A new branch is basically a new pointer in your commit history. Using branch opens a lot of possibilities, like parallel experimentation.</p>
+</blockquote>
+<p>So enough talking, How to work on a branch ? Most probably you would be on <code>master</code> branch if you are following this guide. ( You can check that using <code>git status</code> ).</p>
+<p>So first we will create a new branch using</p>
+<p><code>git branch [name_u_want]</code></p>
+<p>Now to switch to your desired branch use</p>
+<p><code>git checkout -b [name_of_branch]</code></p>
+<p>and now just play around with your code, while a working copy is save somewhere.</p>
+<h2 id="downloading-some-updates-of-a-repository">Downloading some updates of a repository</h2>
+<p>Lets say someone makes some update to a repository that you already had locally. So instead of cloning the whole repo again just use :</p>
+<p><code>git pull [address_of_repo]</code></p>
+<h2 id="some-other-useful-git-command">Some other useful git command</h2>
+<ul>
+<li><strong><code>git diff [obj_1] [obj_2]</code></strong> shows the difference tween the two objects, which maybe branches, commits, working trees etc</li>
+<li><strong><code>git show [commit_hash]</code></strong> shows what was changed in the given commit along with some metadata.</li>
+<li><strong><code>git merge [branch_name]</code></strong> merges the given branch into the current working branch</li>
+<li><strong><code>git config</code></strong> with some options is used to configure the local git environment.</li>
+</ul>
+<h2 id="using-gui">Using GUI</h2>
+<p>All we have done till now can also be done using some GUI program like <strong>Github desktop</strong> or <strong>Gitkraken</strong>. But this is not recommended because we wont be able to learn stuff. This is being mentioned here just for the sake of completion.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/deprov447" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2024  © deprov447 |  </div>
+</footer>
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+baseURL = "deprov447.github.io"
+languageCode = "en-us"
+title = "deprov447"
+theme="archie"
+copyright = "© deprov447"
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+[params]
+	mode="toggle"
+	useCDN=false
+	subtitle = "Nothing but something"
+	customcss = ["css/text.css"]
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/deprov447"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 4

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://192.168.0.105:1313/posts/code-commentary/</loc>
+  </url><url>
+    <loc>http://192.168.0.105:1313/posts/dummy/</loc>
+  </url><url>
+    <loc>http://192.168.0.105:1313/posts/frontspace/</loc>
+  </url><url>
+    <loc>http://192.168.0.105:1313/posts/git-tutorial/</loc>
+  </url><url>
+    <loc>http://192.168.0.105:1313/posts/kvm/</loc>
+  </url><url>
+    <loc>http://192.168.0.105:1313/posts/lfx/</loc>
+  </url><url>
+    <loc>http://192.168.0.105:1313/posts/linux-after-10/</loc>
+  </url><url>
+    <loc>http://192.168.0.105:1313/posts/sok-final/</loc>
+  </url><url>
+    <loc>http://192.168.0.105:1313/posts/sok-selection/</loc>
+  </url><url>
+    <loc>http://192.168.0.105:1313/categories/</loc>
+  </url><url>
+    <loc>http://192.168.0.105:1313/posts/terme/</loc>
+  </url><url>
+    <loc>http://192.168.0.105:1313/</loc>
+  </url><url>
+    <loc>http://192.168.0.105:1313/posts/</loc>
+  </url><url>
+    <loc>http://192.168.0.105:1313/tags/</loc>
+  </url>
+</urlset>

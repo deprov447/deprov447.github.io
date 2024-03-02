@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tag on deprov447</title>
+    <link>//localhost:1313/tags/tag/</link>
+    <description>Recent content in Tag on deprov447</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© deprov447</copyright>
+    <lastBuildDate>Sun, 18 Mar 2018 12:13:30 +0530</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/tag/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Title of the post</title>
+      <link>//localhost:1313/posts/terme/</link>
+      <pubDate>Sun, 18 Mar 2018 12:13:30 +0530</pubDate>
+      <guid>//localhost:1313/posts/terme/</guid>
+      <description>creating a POC terminal emulator&#xA;what is a terminal emulator? the thing that appears when you press ctrl shift t on a linux system, maybe xterm, maybe konsole, maybe st etc. so basically in the olden days there were these gigantic machines, (computer), and talking to it requires you to enter commands on teletype (this is from where term tty come, more later) and the output gets printed on a sheet of paper.</description>
+    </item>
+  </channel>
+</rss>
