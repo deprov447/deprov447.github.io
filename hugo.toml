@@ -10,7 +10,6 @@ pygmentscodefencesguesssyntax = true
 [params]
 	mode="toggle"
 	useCDN=false
-	subtitle = "Nothing but something"
 	customcss = ["css/text.css"]
 
 [[params.social]]
@@ -19,16 +18,21 @@ icon = "github"
 url = "https://github.com/deprov447"
 
 [[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
-
-[[menu.main]]
 name = "All posts"
 url = "/posts"
 weight = 2
 
 [[menu.main]]
+name = "Projects"
+url = "/projects"
+weight = 3
+
+[[menu.main]]
+name = "Micro wins"
+url = "/micro-wins"
+weight = 4
+
+[[menu.main]]
 name = "About"
 url = "/about"
-weight = 3
+weight = 5
