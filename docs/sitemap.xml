@@ -2,10 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/posts/terme/</loc>
-    <lastmod>2023-12-03T22:07:22+05:30</lastmod>
-  </url><url>
     <loc>/</loc>
+    <lastmod>2024-07-07T17:15:59+05:30</lastmod>
+  </url><url>
+    <loc>/micro-wins/</loc>
+    <lastmod>2024-07-07T17:15:59+05:30</lastmod>
+  </url><url>
+    <loc>/about/</loc>
+    <lastmod>2024-07-07T17:14:28+05:30</lastmod>
+  </url><url>
+    <loc>/projects/</loc>
+    <lastmod>2024-07-07T17:14:28+05:30</lastmod>
+  </url><url>
+    <loc>/posts/terme/</loc>
     <lastmod>2023-12-03T22:07:22+05:30</lastmod>
   </url><url>
     <loc>/posts/</loc>

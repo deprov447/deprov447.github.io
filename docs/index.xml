@@ -4,11 +4,32 @@
     <title>deprov447</title>
     <link>/</link>
     <description>Recent content on deprov447</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© deprov447</copyright>
-    <lastBuildDate>Sun, 03 Dec 2023 22:07:22 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jul 2024 17:15:59 +0530</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Micro wins</title>
+      <link>/micro-wins/</link>
+      <pubDate>Sun, 07 Jul 2024 17:15:59 +0530</pubDate>
+      <guid>/micro-wins/</guid>
+      <description>Small/medium things I have accomplished. Inspiration&#xA;2024 July Before Jul Got selected as top 10 new joiners at Veritas Started focusing more on mental and physical health Started cooking 2023 Graduated First job Passed Certified Kubernetes Administrator Trips, a lot 2022 Participated in Linux Foundation Mentorship, interned for CNCF. Build AMQP protocol parser Hacked my phone and practically bricked it Learned A LOT about Tor protocol Gave my first talk at Azure developer conference on Azure server functions Joined gym for the first time in life Witnessed messi winning the world cup 2021 Participated in Season Of KDE.</description>
+    </item>
+    <item>
+      <title>About me</title>
+      <link>/about/</link>
+      <pubDate>Sun, 07 Jul 2024 17:14:28 +0530</pubDate>
+      <guid>/about/</guid>
+      <description>I am Anubhav Choudhary. I harass my computer and sometimes write about it here. Currently in Pune, India.&#xA;Mail me at &amp;lt;first&amp;gt;.&amp;lt;last&amp;gt;@proton.me&#xA;Where I worked 2023 Veritas as Associate Software Engineer 2022 Pixie as Linux Foundation mentee 2022 HappilyEver.co as Full stack developer Intern 2021 Calamares as KDE mentee Where I studied 2019-23 Bachelors degree in CS from IIIT Bh </description>
+    </item>
+    <item>
+      <title>Projects</title>
+      <link>/projects/</link>
+      <pubDate>Sun, 07 Jul 2024 17:14:28 +0530</pubDate>
+      <guid>/projects/</guid>
+      <description>Soon</description>
+    </item>
     <item>
       <title>Creating a POC terminal emulator</title>
       <link>/posts/terme/</link>
