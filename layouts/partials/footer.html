@@ -8,7 +8,7 @@
   <div class="footer-info">
     {{ dateFormat "2006" now }} {{ with .Site.Copyright }} {{ . }} {{ end }}  </div>
 </footer>
-{{ if not .Site.IsServer }}
+{{ if not hugo.IsServer }}
 {{ template "_internal/google_analytics.html" . }}
 {{ end }}
 
