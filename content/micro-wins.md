@@ -7,13 +7,9 @@ _Small/medium things I have accomplished. [Inspiration](https://achievementsof-l
 
 ### 2024
 
-#### July
-
-#### Before Jul
-
 - Got selected as top 10 new joiners at Veritas
-- Started focusing more on mental and physical health
-- Started cooking
+- Realized there's something called mental and physical health
+- Cook, new *human* languages
 
 ### 2023
 
