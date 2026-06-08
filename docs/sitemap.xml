@@ -3,47 +3,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/about/</loc>
+    <loc>/about/</loc>
     <lastmod>2026-06-06T17:14:28+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/</loc>
+    <loc>/</loc>
     <lastmod>2026-06-06T17:14:28+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/micro-wins/</loc>
+    <loc>/micro-wins/</loc>
     <lastmod>2024-07-07T17:15:59+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/projects/</loc>
+    <loc>/projects/</loc>
     <lastmod>2024-07-07T17:14:28+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/terme/</loc>
+    <loc>/posts/terme/</loc>
     <lastmod>2023-12-03T22:07:22+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/</loc>
+    <loc>/posts/</loc>
     <lastmod>2023-12-03T22:07:22+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/code-commentary/</loc>
+    <loc>/posts/code-commentary/</loc>
     <lastmod>2023-06-14T00:18:47+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/lfx/</loc>
+    <loc>/posts/lfx/</loc>
     <lastmod>2022-07-31T19:36:13+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/sok-final/</loc>
+    <loc>/posts/sok-final/</loc>
     <lastmod>2021-05-22T19:36:13+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/kvm/</loc>
+    <loc>/posts/kvm/</loc>
     <lastmod>2021-04-16T16:22:30+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/sok-selection/</loc>
+    <loc>/posts/sok-selection/</loc>
     <lastmod>2021-01-13T15:48:13+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/git-tutorial/</loc>
+    <loc>/posts/git-tutorial/</loc>
     <lastmod>2020-10-08T19:36:13+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/linux-after-10/</loc>
+    <loc>/posts/linux-after-10/</loc>
     <lastmod>2020-10-05T15:53:04+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>/categories/</loc>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>/tags/</loc>
   </url>
 </urlset>
