@@ -1,69 +1,75 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on deprov447</title>
-    <link>/posts/</link>
-    <description>Recent content in Posts on deprov447</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <copyright>© deprov447</copyright>
-    <lastBuildDate>Sun, 03 Dec 2023 22:07:22 +0530</lastBuildDate>
-    <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Creating a POC terminal emulator</title>
-      <link>/posts/terme/</link>
-      <pubDate>Sun, 03 Dec 2023 22:07:22 +0530</pubDate>
-      <guid>/posts/terme/</guid>
-      <description>what is a terminal emulator? the thing that appears when you press ctrl shift t on a linux system, maybe xterm, maybe konsole, maybe st etc. so basically in the olden days there were these gigantic machines, (computer), and talking to it requires you to enter commands on teletype (this is from where term tty come, more later) and the output gets printed on a sheet of paper. watch this amazing video for an idea, at least the last part.</description>
-    </item>
-    <item>
-      <title>Code Comment - ary</title>
-      <link>/posts/code-commentary/</link>
-      <pubDate>Wed, 14 Jun 2023 00:18:47 +0530</pubDate>
-      <guid>/posts/code-commentary/</guid>
-      <description>Programs must be written for people to read, and only incidentally for machines to execute. &amp;mdash; Structure and Interpretation of Computer Programs&#xA;Code comments are one of the things which are as conflicted as one&amp;rsquo;s belief of best programming language. Some believe in no comment at all, some in extensive commenting, some in &amp;ldquo;block commenting&amp;rdquo;, and others in &amp;ldquo;line commenting&amp;rdquo;. What is right really depends on the situation and the needs.</description>
-    </item>
-    <item>
-      <title>LFX Mentorship For Me</title>
-      <link>/posts/lfx/</link>
-      <pubDate>Sun, 31 Jul 2022 19:36:13 +0530</pubDate>
-      <guid>/posts/lfx/</guid>
-      <description>Hi everyone, I recently completed my LFX Mentorship project. I was a mentee for the LFXM summer term of 2022 at Pixie, a CNCF sandbox project donated by The New Relic.&#xA;In this blog, I will be sharing my experience of mentorship. (TLDR; just awesome, one-of-a-kind experience &amp;lt;3)&#xA;If you&amp;rsquo;re also applying for this (which every open-source newbie should), or have a doubt, feel free to drop me a message. I&amp;rsquo;d be more than happy to help.</description>
-    </item>
-    <item>
-      <title>Season of KDE 2021 Final Update</title>
-      <link>/posts/sok-final/</link>
-      <pubDate>Sat, 22 May 2021 19:36:13 +0530</pubDate>
-      <guid>/posts/sok-final/</guid>
-      <description>Hello again everyone, I wrote my last update related to Season of KDE in January, and now is the time for the final update. I am sorry I couldn&amp;rsquo;t write blogs in between. The 3 months passed by like at supersonic speed.&#xA;So I was selected to work on Calamares project under Adriaan de Groot. Most of my work revolved around the functionality of sending the installation logs to paste server online.</description>
-    </item>
-    <item>
-      <title>Kernel Based Virtualization</title>
-      <link>/posts/kvm/</link>
-      <pubDate>Fri, 16 Apr 2021 16:22:30 +0530</pubDate>
-      <guid>/posts/kvm/</guid>
-      <description>KVM (Kernel-based Virtual Machine) is an open source, full virtualization solution for x86 hardwares containing virtualization extensions. It is a hypervisor built into the Linux kernel and unlike regular VM players like Virtualbox and VMware which use emulation, KVM uses CPU extensions for hardware assisted virtualization via a kernel module (thats the secret for that blazing speed). Each virtual machine has private virtualized hardware: a network card, disk, graphics adapter and all the peripherals.</description>
-    </item>
-    <item>
-      <title>Season of KDE Selection</title>
-      <link>/posts/sok-selection/</link>
-      <pubDate>Wed, 13 Jan 2021 15:48:13 +0530</pubDate>
-      <guid>/posts/sok-selection/</guid>
-      <description>Hey people from around the world !!&#xA;I am Anubhav Choudhary, an engineering student from India. I recently got selected in Season of KDE 2021 to work under Calamares project. My work is to resolve numerous issues and complete some tasks mentioned on Calamares&amp;rsquo; Issue page. And I am just too excited about that. Why? Because I have been contributing to open source (to KDE? yes) for sometime now. But It always felt very unordered and random contributions (which I was not happy about).</description>
-    </item>
-    <item>
-      <title>A Simple Git Tutorial</title>
-      <link>/posts/git-tutorial/</link>
-      <pubDate>Thu, 08 Oct 2020 19:36:13 +0530</pubDate>
-      <guid>/posts/git-tutorial/</guid>
-      <description>So new to Git and Github ? And wondering what is it ? Today we are gonna talk about these things. We will start off with Git. And once you understand git, everything related is quite easy; be it GitHub, Bitbucket, GitLab etc.&#xA;So What Is Git ? Git is a merely a development tool, which has nothing to do with your application itself, but adds to the productivity and manageability of code.</description>
-    </item>
-    <item>
-      <title>Linux Experience After 10 Months</title>
-      <link>/posts/linux-after-10/</link>
-      <pubDate>Mon, 05 Oct 2020 15:53:04 +0530</pubDate>
-      <guid>/posts/linux-after-10/</guid>
-      <description>Its been around 10 months of me using Linux as my primary OS. I bought my laptop on Jan 1st, 2020 (yes :D) and today its Oct 5th (technically been 9 months, but okay). So let me share my experience regarding the same.&#xA;Starting / Booting Up So immediately after getting my laptop, I downloaded an Ubuntu 18.04 LTS ISO image and flashed it on a pen drive. Then booted the laptop using that.</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Posts on deprov447</title>
+		<link>//localhost:63320/posts/</link>
+		<description>Recent content in Posts on deprov447</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+			<copyright>© deprov447</copyright>
+		
+		
+			<lastBuildDate>Sun, 03 Dec 2023 22:07:22 +0530</lastBuildDate>
+		
+			<atom:link href="//localhost:63320/posts/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Creating a POC terminal emulator</title>
+				<link>//localhost:63320/posts/terme/</link>
+				<pubDate>Sun, 03 Dec 2023 22:07:22 +0530</pubDate>
+				<guid>//localhost:63320/posts/terme/</guid>
+				<description>&lt;h1 id=&#34;what-is-a-terminal-emulator&#34;&gt;what is a terminal emulator?&lt;/h1&gt;&#xA;&lt;p&gt;the thing that appears when you press &lt;code&gt;ctrl shift t&lt;/code&gt; on a linux system, maybe xterm, maybe konsole, maybe st etc. so basically in the olden days there were these gigantic machines, (computer), and talking to it requires you to enter commands on &lt;a href=&#34;https://en.wikipedia.org/wiki/Teleprinter&#34;&gt;teletype&lt;/a&gt; (this is from where term &lt;code&gt;tty&lt;/code&gt; come, more later) and the output gets printed on a sheet of paper. watch &lt;a href=&#34;https://www.youtube.com/watch?v=2XLZ4Z8LpEE&#34;&gt;this&lt;/a&gt; amazing video for an idea, at least the last part.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Code Comment - ary</title>
+				<link>//localhost:63320/posts/code-commentary/</link>
+				<pubDate>Wed, 14 Jun 2023 00:18:47 +0530</pubDate>
+				<guid>//localhost:63320/posts/code-commentary/</guid>
+				<description>&lt;blockquote&gt;&#xA;&lt;p&gt;Programs must be written for people to read, and only incidentally for machines to execute.&#xA;&amp;mdash; &lt;a href=&#34;https://web.mit.edu/alexmv/6.037/sicp.pdf&#34;&gt;Structure and Interpretation of Computer Programs&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Code comments are one of the things which are as conflicted as one&amp;rsquo;s belief of &lt;strong&gt;best programming language&lt;/strong&gt;.  Some believe in no comment at all, some in extensive commenting, some in &amp;ldquo;block commenting&amp;rdquo;, and others in &amp;ldquo;line commenting&amp;rdquo;. What is right really depends on the situation and the needs. But choosing a good commenting strategy and knowledge of common best practices not only makes your life easy but also the lives of anyone looking at your source code.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>LFX Mentorship For Me</title>
+				<link>//localhost:63320/posts/lfx/</link>
+				<pubDate>Sun, 31 Jul 2022 19:36:13 +0530</pubDate>
+				<guid>//localhost:63320/posts/lfx/</guid>
+				<description>&lt;p&gt;Hi everyone, I recently completed my LFX Mentorship project. I was a mentee for the LFXM summer term of 2022 at Pixie, a CNCF sandbox project donated by The New Relic.&lt;/p&gt;&#xA;&lt;p&gt;In this blog, I will be sharing my experience of mentorship.&#xA;(TLDR; just awesome, one-of-a-kind experience &amp;lt;3)&lt;/p&gt;&#xA;&lt;p&gt;If you&amp;rsquo;re also applying for this (which every open-source newbie should), or have a doubt, feel free to &lt;a href=&#34;https://linktr.ee/deprov447&#34;&gt;drop me a message&lt;/a&gt;. I&amp;rsquo;d be more than happy to help.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Season of KDE 2021 Final Update</title>
+				<link>//localhost:63320/posts/sok-final/</link>
+				<pubDate>Sat, 22 May 2021 19:36:13 +0530</pubDate>
+				<guid>//localhost:63320/posts/sok-final/</guid>
+				<description>&lt;p&gt;Hello again everyone,&#xA;I wrote my last update related to Season of KDE in January, and now is the time for the final update. I am sorry I couldn&amp;rsquo;t write blogs in between. The 3 months passed by like at supersonic speed.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.hashnode.com/res/hashnode/image/upload/v1633831669757/YYuc8uJV4.png&#34; alt=&#34;Calamares Logo&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;So I was selected to work on &lt;a href=&#34;github.com/calamares/calamares&#34;&gt;Calamares project&lt;/a&gt; under Adriaan de Groot. Most of my work revolved around the functionality of sending the installation logs to paste server online. This feature would help distro maintainers, calamares developers as well as the end users to pin point the errors that possibly may have caused installation to stop (if that happens).&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Kernel Based Virtualization</title>
+				<link>//localhost:63320/posts/kvm/</link>
+				<pubDate>Fri, 16 Apr 2021 16:22:30 +0530</pubDate>
+				<guid>//localhost:63320/posts/kvm/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;KVM (Kernel-based Virtual Machine)&lt;/strong&gt; is an open source, full virtualization solution for x86 hardwares containing virtualization extensions. It is a hypervisor built into the Linux kernel and unlike regular VM players like Virtualbox and VMware which use emulation, KVM uses CPU extensions for hardware assisted virtualization via a kernel module (thats the secret for that blazing speed).&#xA;Each virtual machine has private virtualized hardware: a network card, disk, graphics adapter and all the peripherals.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Season of KDE Selection</title>
+				<link>//localhost:63320/posts/sok-selection/</link>
+				<pubDate>Wed, 13 Jan 2021 15:48:13 +0530</pubDate>
+				<guid>//localhost:63320/posts/sok-selection/</guid>
+				<description>&lt;p&gt;Hey people from around the world !!&lt;/p&gt;&#xA;&lt;p&gt;I am Anubhav Choudhary, an engineering student from India. I recently got selected in &lt;a href=&#34;https://season.kde.org&#34;&gt;Season of KDE 2021&lt;/a&gt; to work under &lt;a href=&#34;https://calamares.io&#34;&gt;Calamares&lt;/a&gt; project. My work is to resolve numerous issues and complete some tasks mentioned on &lt;a href=&#34;https://github.com/calamares/calamares/labels/hacktoberfest&#34;&gt;Calamares&amp;rsquo; Issue page&lt;/a&gt;.  And I am just too excited about that. Why? Because I have been contributing to open source (to KDE? yes) for sometime now. But It always felt very unordered and random contributions (which I was not happy about). But now that I&amp;rsquo;m in SoK and things are preplanned, hopefully these next 3 months will be smooth and calm.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>A Simple Git Tutorial</title>
+				<link>//localhost:63320/posts/git-tutorial/</link>
+				<pubDate>Thu, 08 Oct 2020 19:36:13 +0530</pubDate>
+				<guid>//localhost:63320/posts/git-tutorial/</guid>
+				<description>&lt;p&gt;So new to Git and Github ? And wondering what is it ? Today we are gonna talk about these things. We will start off with Git. And once you understand git, everything related is quite easy; be it GitHub, Bitbucket, GitLab etc.&lt;/p&gt;&#xA;&lt;h2 id=&#34;so-what-is-git-&#34;&gt;So What Is Git ?&lt;/h2&gt;&#xA;&lt;p&gt;Git is a merely a development tool, which has nothing to do with your application itself, but adds to the productivity and manageability of code.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Linux Experience After 10 Months</title>
+				<link>//localhost:63320/posts/linux-after-10/</link>
+				<pubDate>Mon, 05 Oct 2020 15:53:04 +0530</pubDate>
+				<guid>//localhost:63320/posts/linux-after-10/</guid>
+				<description>&lt;p&gt;&lt;img src=&#34;https://cdn.hashnode.com/res/hashnode/image/upload/v1633831682068/Ul3fMJoUY.jpeg&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Its been around 10 months of me using Linux as my primary OS. I bought my laptop on Jan 1st, 2020 (yes :D) and today its Oct 5th (technically been 9 months, but okay). So let me share my experience regarding the same.&lt;/p&gt;&#xA;&lt;h3 id=&#34;starting--booting-up&#34;&gt;Starting / Booting Up&lt;/h3&gt;&#xA;&lt;p&gt;So immediately after getting my laptop, I downloaded an Ubuntu 18.04 LTS ISO image and flashed it on a pen drive. Then booted the laptop using that. The best thing was that I can just try out the new OS without having to install it on HDD. After an hour or so of playing, finally installed Ubuntu. The toughest part till now was installing GRUB and its configuration but everything else was quite easy, just had to follow an online guide. (I always tend to follow some documentation or guide while working with a new piece of code)&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

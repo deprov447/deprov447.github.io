@@ -1,90 +1,96 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>deprov447</title>
-    <link>/</link>
-    <description>Recent content on deprov447</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <copyright>© deprov447</copyright>
-    <lastBuildDate>Sun, 07 Jul 2024 17:15:59 +0530</lastBuildDate>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Micro wins</title>
-      <link>/micro-wins/</link>
-      <pubDate>Sun, 07 Jul 2024 17:15:59 +0530</pubDate>
-      <guid>/micro-wins/</guid>
-      <description>Small/medium things I have accomplished. Inspiration&#xA;2024 Got selected as top 10 new joiners at Veritas Realized there&amp;rsquo;s something called mental and physical health Cook, new human languages 2023 Graduated First job Passed Certified Kubernetes Administrator Trips, a lot 2022 Participated in Linux Foundation Mentorship, interned for CNCF. Build AMQP protocol parser Hacked my phone and practically bricked it Learned A LOT about Tor protocol Gave my first talk at Azure developer conference on Azure server functions Joined gym for the first time in life Witnessed messi winning the world cup 2021 Participated in Season Of KDE.</description>
-    </item>
-    <item>
-      <title>About me</title>
-      <link>/about/</link>
-      <pubDate>Sun, 07 Jul 2024 17:14:28 +0530</pubDate>
-      <guid>/about/</guid>
-      <description>I am Anubhav Choudhary. I harass my computer and sometimes write about it here. Currently in Pune, India.&#xA;Mail me at &amp;lt;first&amp;gt;.&amp;lt;last&amp;gt;@proton.me&#xA;Where I worked 2023 Veritas as Associate Software Engineer 2022 Pixie as Linux Foundation mentee 2022 HappilyEver.co as Full stack developer Intern 2021 Calamares as KDE mentee Where I studied 2019-23 Bachelors degree in CS from IIIT Bh </description>
-    </item>
-    <item>
-      <title>Projects</title>
-      <link>/projects/</link>
-      <pubDate>Sun, 07 Jul 2024 17:14:28 +0530</pubDate>
-      <guid>/projects/</guid>
-      <description>Soon</description>
-    </item>
-    <item>
-      <title>Creating a POC terminal emulator</title>
-      <link>/posts/terme/</link>
-      <pubDate>Sun, 03 Dec 2023 22:07:22 +0530</pubDate>
-      <guid>/posts/terme/</guid>
-      <description>what is a terminal emulator? the thing that appears when you press ctrl shift t on a linux system, maybe xterm, maybe konsole, maybe st etc. so basically in the olden days there were these gigantic machines, (computer), and talking to it requires you to enter commands on teletype (this is from where term tty come, more later) and the output gets printed on a sheet of paper. watch this amazing video for an idea, at least the last part.</description>
-    </item>
-    <item>
-      <title>Code Comment - ary</title>
-      <link>/posts/code-commentary/</link>
-      <pubDate>Wed, 14 Jun 2023 00:18:47 +0530</pubDate>
-      <guid>/posts/code-commentary/</guid>
-      <description>Programs must be written for people to read, and only incidentally for machines to execute. &amp;mdash; Structure and Interpretation of Computer Programs&#xA;Code comments are one of the things which are as conflicted as one&amp;rsquo;s belief of best programming language. Some believe in no comment at all, some in extensive commenting, some in &amp;ldquo;block commenting&amp;rdquo;, and others in &amp;ldquo;line commenting&amp;rdquo;. What is right really depends on the situation and the needs.</description>
-    </item>
-    <item>
-      <title>LFX Mentorship For Me</title>
-      <link>/posts/lfx/</link>
-      <pubDate>Sun, 31 Jul 2022 19:36:13 +0530</pubDate>
-      <guid>/posts/lfx/</guid>
-      <description>Hi everyone, I recently completed my LFX Mentorship project. I was a mentee for the LFXM summer term of 2022 at Pixie, a CNCF sandbox project donated by The New Relic.&#xA;In this blog, I will be sharing my experience of mentorship. (TLDR; just awesome, one-of-a-kind experience &amp;lt;3)&#xA;If you&amp;rsquo;re also applying for this (which every open-source newbie should), or have a doubt, feel free to drop me a message. I&amp;rsquo;d be more than happy to help.</description>
-    </item>
-    <item>
-      <title>Season of KDE 2021 Final Update</title>
-      <link>/posts/sok-final/</link>
-      <pubDate>Sat, 22 May 2021 19:36:13 +0530</pubDate>
-      <guid>/posts/sok-final/</guid>
-      <description>Hello again everyone, I wrote my last update related to Season of KDE in January, and now is the time for the final update. I am sorry I couldn&amp;rsquo;t write blogs in between. The 3 months passed by like at supersonic speed.&#xA;So I was selected to work on Calamares project under Adriaan de Groot. Most of my work revolved around the functionality of sending the installation logs to paste server online.</description>
-    </item>
-    <item>
-      <title>Kernel Based Virtualization</title>
-      <link>/posts/kvm/</link>
-      <pubDate>Fri, 16 Apr 2021 16:22:30 +0530</pubDate>
-      <guid>/posts/kvm/</guid>
-      <description>KVM (Kernel-based Virtual Machine) is an open source, full virtualization solution for x86 hardwares containing virtualization extensions. It is a hypervisor built into the Linux kernel and unlike regular VM players like Virtualbox and VMware which use emulation, KVM uses CPU extensions for hardware assisted virtualization via a kernel module (thats the secret for that blazing speed). Each virtual machine has private virtualized hardware: a network card, disk, graphics adapter and all the peripherals.</description>
-    </item>
-    <item>
-      <title>Season of KDE Selection</title>
-      <link>/posts/sok-selection/</link>
-      <pubDate>Wed, 13 Jan 2021 15:48:13 +0530</pubDate>
-      <guid>/posts/sok-selection/</guid>
-      <description>Hey people from around the world !!&#xA;I am Anubhav Choudhary, an engineering student from India. I recently got selected in Season of KDE 2021 to work under Calamares project. My work is to resolve numerous issues and complete some tasks mentioned on Calamares&amp;rsquo; Issue page. And I am just too excited about that. Why? Because I have been contributing to open source (to KDE? yes) for sometime now. But It always felt very unordered and random contributions (which I was not happy about).</description>
-    </item>
-    <item>
-      <title>A Simple Git Tutorial</title>
-      <link>/posts/git-tutorial/</link>
-      <pubDate>Thu, 08 Oct 2020 19:36:13 +0530</pubDate>
-      <guid>/posts/git-tutorial/</guid>
-      <description>So new to Git and Github ? And wondering what is it ? Today we are gonna talk about these things. We will start off with Git. And once you understand git, everything related is quite easy; be it GitHub, Bitbucket, GitLab etc.&#xA;So What Is Git ? Git is a merely a development tool, which has nothing to do with your application itself, but adds to the productivity and manageability of code.</description>
-    </item>
-    <item>
-      <title>Linux Experience After 10 Months</title>
-      <link>/posts/linux-after-10/</link>
-      <pubDate>Mon, 05 Oct 2020 15:53:04 +0530</pubDate>
-      <guid>/posts/linux-after-10/</guid>
-      <description>Its been around 10 months of me using Linux as my primary OS. I bought my laptop on Jan 1st, 2020 (yes :D) and today its Oct 5th (technically been 9 months, but okay). So let me share my experience regarding the same.&#xA;Starting / Booting Up So immediately after getting my laptop, I downloaded an Ubuntu 18.04 LTS ISO image and flashed it on a pen drive. Then booted the laptop using that.</description>
-    </item>
-  </channel>
+	<channel>
+		<title>deprov447</title>
+		<link>//localhost:1313/</link>
+		<description>Recent content on deprov447</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+			<copyright>© deprov447</copyright>
+		
+		
+			<lastBuildDate>Sat, 06 Jun 2026 17:14:28 +0530</lastBuildDate>
+		
+			<atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>About me</title>
+				<link>//localhost:1313/about/</link>
+				<pubDate>Sat, 06 Jun 2026 17:14:28 +0530</pubDate>
+				<guid>//localhost:1313/about/</guid>
+				<description>&lt;p&gt;I am Anubhav Choudhary. I harass my computer and sometimes write about it here. Currently based in Bangalore, India.&lt;/p&gt;&#xA;&lt;p&gt;Mail me at &lt;code&gt;&amp;lt;first&amp;gt;.&amp;lt;last&amp;gt;@proton.me&lt;/code&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;where-i-worked&#34;&gt;Where I worked&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;2025&lt;/strong&gt; &lt;a href=&#34;https://www.circles.life&#34;&gt;Circles.Life&lt;/a&gt; as Software Engineer 2&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;2024&lt;/strong&gt; &lt;a href=&#34;https://www.walmart.com&#34;&gt;Walmart&lt;/a&gt; as Software Engineer 2&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;2023&lt;/strong&gt; &lt;a href=&#34;https://www.veritas.com&#34;&gt;Veritas&lt;/a&gt; as Associate Software Engineer&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;2022&lt;/strong&gt; &lt;a href=&#34;https://px.dev&#34;&gt;Pixie&lt;/a&gt; as &lt;a href=&#34;https://lfx.linuxfoundation.org/tools/mentorship&#34;&gt;Linux Foundation mentee&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;2022&lt;/strong&gt; &lt;a href=&#34;https://in.linkedin.com/company/happilyever&#34;&gt;HappilyEver.co&lt;/a&gt; as Full stack developer Intern&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;2021&lt;/strong&gt; &lt;a href=&#34;https://calamares.io/&#34;&gt;Calamares&lt;/a&gt; as &lt;a href=&#34;https://kde.org&#34;&gt;KDE&lt;/a&gt; mentee&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;where-i-studied&#34;&gt;Where I studied&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;2019-23&lt;/strong&gt; Bachelors degree in CS from &lt;a href=&#34;https://www.iiit-bh.ac.in/&#34;&gt;IIIT Bh&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+			<item>
+				<title>Micro wins</title>
+				<link>//localhost:1313/micro-wins/</link>
+				<pubDate>Sun, 07 Jul 2024 17:15:59 +0530</pubDate>
+				<guid>//localhost:1313/micro-wins/</guid>
+				<description>&lt;p&gt;&lt;em&gt;Small/medium things I have accomplished. &lt;a href=&#34;https://achievementsof-life.vercel.app/&#34;&gt;Inspiration&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;2024&#34;&gt;2024&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Got selected as top 10 new joiners at Veritas&lt;/li&gt;&#xA;&lt;li&gt;Realized there&amp;rsquo;s something called mental and physical health&lt;/li&gt;&#xA;&lt;li&gt;Cook, new &lt;em&gt;human&lt;/em&gt; languages&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2023&#34;&gt;2023&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Graduated&lt;/li&gt;&#xA;&lt;li&gt;First job&lt;/li&gt;&#xA;&lt;li&gt;Passed Certified Kubernetes Administrator&lt;/li&gt;&#xA;&lt;li&gt;Trips, a lot&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2022&#34;&gt;2022&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Participated in Linux Foundation Mentorship, interned for CNCF. Build AMQP protocol parser&lt;/li&gt;&#xA;&lt;li&gt;Hacked my phone and practically bricked it&lt;/li&gt;&#xA;&lt;li&gt;Learned A LOT about Tor protocol&lt;/li&gt;&#xA;&lt;li&gt;Gave my first talk at Azure developer conference on Azure server functions&lt;/li&gt;&#xA;&lt;li&gt;Joined gym for the first time in life&lt;/li&gt;&#xA;&lt;li&gt;Witnessed messi winning the world cup&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2021&#34;&gt;2021&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Participated in Season Of KDE. Worked on &lt;a href=&#34;https://calamares.io/sok/&#34;&gt;Calamares&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Introduced to KVM, event horizon for virtualization&lt;/li&gt;&#xA;&lt;li&gt;Got featured (well not me, my work) on one of my favourite youtube channels &lt;a href=&#34;https://www.youtube.com/watch?v=0I1CrXl86jw&amp;amp;pp=ygUaZXJpayBkdWJvaXMgYXJjb2xpbnV4IDE5NzI%3D&#34;&gt;Erik Dubois&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Got graph developer certified from apollo graphql&lt;/li&gt;&#xA;&lt;li&gt;Joined college&amp;rsquo;s Google Developer Students Club as web dev lead&lt;/li&gt;&#xA;&lt;li&gt;Joined college&amp;rsquo;s Programming Society as head&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2020&#34;&gt;2020&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Got my first laptop&lt;/li&gt;&#xA;&lt;li&gt;Got my first internship&lt;/li&gt;&#xA;&lt;li&gt;Started OS and web development&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2019&#34;&gt;2019&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Moved out to study&lt;/li&gt;&#xA;&lt;li&gt;Started to learn cpp&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;before-2019&#34;&gt;Before 2019&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Made most out of a 2gig RAM, Intel Core 2 (thanks to the legendary &lt;a href=&#34;https://www.gamesindustry.biz/transgaming-launches-swiftshader-the-worlds-fastest-shader-enabled-3d-rendering-software&#34;&gt;SwiftShader&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;Hacked FIFA 14 to update squads and jerseys and things&lt;/li&gt;&#xA;&lt;li&gt;Happy&lt;/li&gt;&#xA;&lt;li&gt;Ate okra for the first time, march 12th, 09 20:48:42 IST&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+			<item>
+				<title>Projects</title>
+				<link>//localhost:1313/projects/</link>
+				<pubDate>Sun, 07 Jul 2024 17:14:28 +0530</pubDate>
+				<guid>//localhost:1313/projects/</guid>
+				<description>&lt;blockquote&gt;&#xA;&lt;p&gt;Soon&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Creating a POC terminal emulator</title>
+				<link>//localhost:1313/posts/terme/</link>
+				<pubDate>Sun, 03 Dec 2023 22:07:22 +0530</pubDate>
+				<guid>//localhost:1313/posts/terme/</guid>
+				<description>&lt;h1 id=&#34;what-is-a-terminal-emulator&#34;&gt;what is a terminal emulator?&lt;/h1&gt;&#xA;&lt;p&gt;the thing that appears when you press &lt;code&gt;ctrl shift t&lt;/code&gt; on a linux system, maybe xterm, maybe konsole, maybe st etc. so basically in the olden days there were these gigantic machines, (computer), and talking to it requires you to enter commands on &lt;a href=&#34;https://en.wikipedia.org/wiki/Teleprinter&#34;&gt;teletype&lt;/a&gt; (this is from where term &lt;code&gt;tty&lt;/code&gt; come, more later) and the output gets printed on a sheet of paper. watch &lt;a href=&#34;https://www.youtube.com/watch?v=2XLZ4Z8LpEE&#34;&gt;this&lt;/a&gt; amazing video for an idea, at least the last part.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Code Comment - ary</title>
+				<link>//localhost:1313/posts/code-commentary/</link>
+				<pubDate>Wed, 14 Jun 2023 00:18:47 +0530</pubDate>
+				<guid>//localhost:1313/posts/code-commentary/</guid>
+				<description>&lt;blockquote&gt;&#xA;&lt;p&gt;Programs must be written for people to read, and only incidentally for machines to execute.&#xA;&amp;mdash; &lt;a href=&#34;https://web.mit.edu/alexmv/6.037/sicp.pdf&#34;&gt;Structure and Interpretation of Computer Programs&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Code comments are one of the things which are as conflicted as one&amp;rsquo;s belief of &lt;strong&gt;best programming language&lt;/strong&gt;.  Some believe in no comment at all, some in extensive commenting, some in &amp;ldquo;block commenting&amp;rdquo;, and others in &amp;ldquo;line commenting&amp;rdquo;. What is right really depends on the situation and the needs. But choosing a good commenting strategy and knowledge of common best practices not only makes your life easy but also the lives of anyone looking at your source code.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>LFX Mentorship For Me</title>
+				<link>//localhost:1313/posts/lfx/</link>
+				<pubDate>Sun, 31 Jul 2022 19:36:13 +0530</pubDate>
+				<guid>//localhost:1313/posts/lfx/</guid>
+				<description>&lt;p&gt;Hi everyone, I recently completed my LFX Mentorship project. I was a mentee for the LFXM summer term of 2022 at Pixie, a CNCF sandbox project donated by The New Relic.&lt;/p&gt;&#xA;&lt;p&gt;In this blog, I will be sharing my experience of mentorship.&#xA;(TLDR; just awesome, one-of-a-kind experience &amp;lt;3)&lt;/p&gt;&#xA;&lt;p&gt;If you&amp;rsquo;re also applying for this (which every open-source newbie should), or have a doubt, feel free to &lt;a href=&#34;https://linktr.ee/deprov447&#34;&gt;drop me a message&lt;/a&gt;. I&amp;rsquo;d be more than happy to help.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Season of KDE 2021 Final Update</title>
+				<link>//localhost:1313/posts/sok-final/</link>
+				<pubDate>Sat, 22 May 2021 19:36:13 +0530</pubDate>
+				<guid>//localhost:1313/posts/sok-final/</guid>
+				<description>&lt;p&gt;Hello again everyone,&#xA;I wrote my last update related to Season of KDE in January, and now is the time for the final update. I am sorry I couldn&amp;rsquo;t write blogs in between. The 3 months passed by like at supersonic speed.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.hashnode.com/res/hashnode/image/upload/v1633831669757/YYuc8uJV4.png&#34; alt=&#34;Calamares Logo&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;So I was selected to work on &lt;a href=&#34;github.com/calamares/calamares&#34;&gt;Calamares project&lt;/a&gt; under Adriaan de Groot. Most of my work revolved around the functionality of sending the installation logs to paste server online. This feature would help distro maintainers, calamares developers as well as the end users to pin point the errors that possibly may have caused installation to stop (if that happens).&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Kernel Based Virtualization</title>
+				<link>//localhost:1313/posts/kvm/</link>
+				<pubDate>Fri, 16 Apr 2021 16:22:30 +0530</pubDate>
+				<guid>//localhost:1313/posts/kvm/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;KVM (Kernel-based Virtual Machine)&lt;/strong&gt; is an open source, full virtualization solution for x86 hardwares containing virtualization extensions. It is a hypervisor built into the Linux kernel and unlike regular VM players like Virtualbox and VMware which use emulation, KVM uses CPU extensions for hardware assisted virtualization via a kernel module (thats the secret for that blazing speed).&#xA;Each virtual machine has private virtualized hardware: a network card, disk, graphics adapter and all the peripherals.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Season of KDE Selection</title>
+				<link>//localhost:1313/posts/sok-selection/</link>
+				<pubDate>Wed, 13 Jan 2021 15:48:13 +0530</pubDate>
+				<guid>//localhost:1313/posts/sok-selection/</guid>
+				<description>&lt;p&gt;Hey people from around the world !!&lt;/p&gt;&#xA;&lt;p&gt;I am Anubhav Choudhary, an engineering student from India. I recently got selected in &lt;a href=&#34;https://season.kde.org&#34;&gt;Season of KDE 2021&lt;/a&gt; to work under &lt;a href=&#34;https://calamares.io&#34;&gt;Calamares&lt;/a&gt; project. My work is to resolve numerous issues and complete some tasks mentioned on &lt;a href=&#34;https://github.com/calamares/calamares/labels/hacktoberfest&#34;&gt;Calamares&amp;rsquo; Issue page&lt;/a&gt;.  And I am just too excited about that. Why? Because I have been contributing to open source (to KDE? yes) for sometime now. But It always felt very unordered and random contributions (which I was not happy about). But now that I&amp;rsquo;m in SoK and things are preplanned, hopefully these next 3 months will be smooth and calm.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>A Simple Git Tutorial</title>
+				<link>//localhost:1313/posts/git-tutorial/</link>
+				<pubDate>Thu, 08 Oct 2020 19:36:13 +0530</pubDate>
+				<guid>//localhost:1313/posts/git-tutorial/</guid>
+				<description>&lt;p&gt;So new to Git and Github ? And wondering what is it ? Today we are gonna talk about these things. We will start off with Git. And once you understand git, everything related is quite easy; be it GitHub, Bitbucket, GitLab etc.&lt;/p&gt;&#xA;&lt;h2 id=&#34;so-what-is-git-&#34;&gt;So What Is Git ?&lt;/h2&gt;&#xA;&lt;p&gt;Git is a merely a development tool, which has nothing to do with your application itself, but adds to the productivity and manageability of code.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Linux Experience After 10 Months</title>
+				<link>//localhost:1313/posts/linux-after-10/</link>
+				<pubDate>Mon, 05 Oct 2020 15:53:04 +0530</pubDate>
+				<guid>//localhost:1313/posts/linux-after-10/</guid>
+				<description>&lt;p&gt;&lt;img src=&#34;https://cdn.hashnode.com/res/hashnode/image/upload/v1633831682068/Ul3fMJoUY.jpeg&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Its been around 10 months of me using Linux as my primary OS. I bought my laptop on Jan 1st, 2020 (yes :D) and today its Oct 5th (technically been 9 months, but okay). So let me share my experience regarding the same.&lt;/p&gt;&#xA;&lt;h3 id=&#34;starting--booting-up&#34;&gt;Starting / Booting Up&lt;/h3&gt;&#xA;&lt;p&gt;So immediately after getting my laptop, I downloaded an Ubuntu 18.04 LTS ISO image and flashed it on a pen drive. Then booted the laptop using that. The best thing was that I can just try out the new OS without having to install it on HDD. After an hour or so of playing, finally installed Ubuntu. The toughest part till now was installing GRUB and its configuration but everything else was quite easy, just had to follow an online guide. (I always tend to follow some documentation or guide while working with a new piece of code)&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>
